@@ -1,5 +1,6 @@
 // call all the required packages
 const express = require('express')
+const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser')
 const multer = require('multer');
 const app = express();
@@ -12,16 +13,17 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // });
 
 // ROUTES
+
 app.get('/', function (req, res) {
     console.log('get');
     res.sendFile(__dirname + '/index.html');
 
 });
 
-app.post('/parsejson', function (req, res) {
+app.post('/parsejson', fileUpload(), function (req, res) {
     console.log('post');
-    //res.json(req);
     console.log(req);
+    console.log(req.files.jsonFile.data.toString('utf8'))
     res.json({ message: 'json file' });
 });
 
