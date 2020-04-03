@@ -24,6 +24,7 @@ app.post('/parsejson', fileUpload(), function (req, res) {
     console.log('post');
     console.log(req);
     console.log(req.files.jsonFile.data.toString('utf8'))
+    const json = req.files.jsonFile.data.toString('utf8')
     res.json({ message: 'json file' });
 });
 
