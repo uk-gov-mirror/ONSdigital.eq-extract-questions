@@ -17,4 +17,16 @@ app.post('/parsejson',
     processQuestionnaire
 )
 
+// app.post('/parsejson',
+//     fileUpload(),
+//     parseQuestionnaire,
+//     processQuestionnaire, function (req, res) {
+//         res.redirect('results.html');
+//     }
+// )
+
+// app.post('/parsejson', function (req, res) {
+//     res.redirect('results.html');
+// });
+
 app.listen(3000, () => console.log('Server started on port 3000'));
