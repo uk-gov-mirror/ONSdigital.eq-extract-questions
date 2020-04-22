@@ -5,7 +5,7 @@
 
     <form method="POST" action="/download">
         <input type="submit" class="btn" value="Download csv" />
-        <input type="hidden" value="{{ data | dump }}" name="jsondata" />
+        <input type="hidden" value="{{ questions | dump }}" name="questions" />
     </form>
 
 <table class="table">
@@ -18,7 +18,7 @@
     <th class="table--header--cell">Options Value</th>
     </thead>
     <tbody>
-    {%for question in data %}
+    {%for question in questions %}
        {%for answer in question.answers %}
             {% if answer.options %}
                 {%for option in answer.options %}

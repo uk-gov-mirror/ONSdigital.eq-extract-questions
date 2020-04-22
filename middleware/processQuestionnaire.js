@@ -10,11 +10,8 @@ const getAllQuestions = (questionnaire) => {
   return flatMap(filter(getAllBlocks(questionnaire), "questions"), "questions");
 };
 module.exports = (req, res, next) => {
-  res.locals.jsonData = getAllQuestions(res.locals.questionnaire);
+  res.locals.questions = getAllQuestions(JSON.parse(req.files.jsonFile.data));
   next()
-  
-  //res.render("results.html", { data: JSON.stringify(jsonData) });
-  //res.render("results.html", { data: jsonData });
 };
 
 
