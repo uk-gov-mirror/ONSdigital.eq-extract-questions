@@ -1,21 +1,38 @@
 const express = require('express')
+const nunjucks = require('nunjucks')
 const fileUpload = require('express-fileupload');
 const _ = require("lodash")
 const parseQuestionnaire = require(`./middleware/parseQuestionnaire`)
 const processQuestionnaire = require(`./middleware/processQuestionnaire`)
+const downloadcsv = require(`./middleware/downloadcsv`);
+const bodyParser = require("body-parser");
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'))
+//app.use(express.static('public'))
+//app.use(express.static("templates"))
+
+nunjucks.configure("views", {
+  autoescape: true,
+  express: app,
+});
 
 app.get('/', function (req, res) {
     res.render('index.html');
 });
 
-app.post('/parsejson',
+app.post('/',
     fileUpload(),
     parseQuestionnaire,
-    processQuestionnaire
+    processQuestionnaire,
+    (req, res) => {
+        res.render("results.html", { data: res.locals.jsonData });
+    }
 )
+
+app.post("/download",
+  downloadcsv
+);
 
 // app.post('/parsejson',
 //     fileUpload(),
