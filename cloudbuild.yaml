@@ -24,7 +24,7 @@ steps:
     - '-c'
     - |
       gcloud source repos clone eq-extract-questions-env && \
-      cd eq-questionnaire-registry-env && \
+      cd eq-extract-questions-env && \
       git checkout ${_ENV}-candidate && \
       git config user.email $(gcloud auth list --filter=status:ACTIVE --format='value(account)')
 # This step generates the new manifest
