@@ -3,6 +3,10 @@
 {% block body %}
 <h1 class="jupiter"> Results</h1>
 
+    <form method="GET" action="/">
+        <input type="submit" class="btn" value="Choose File" />
+    </form>
+
     <form method="POST" action="/download">
         <input type="submit" class="btn" value="Download csv" />
         <input type="hidden" value="{{ questions | dump }}" name="questions" />
