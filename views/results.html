@@ -7,10 +7,14 @@
         <input type="submit" class="btn" value="Choose File" />
     </form>
 
+<div style="display:inline;">
     <form method="POST" action="/download">
         <input type="submit" class="btn" value="Download csv" />
         <input type="hidden" value="{{ questions | dump }}" name="questions" />
     </form>
+
+    <input type="submit" class="btn" value="Choose File" />
+</div>
 
 <table class="table">
     <thead class="table--head">
