@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start_service": "node server.js"
+    "start_service": "node server.js",
+    "start_developer" : "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "json2csv": "^5.0.0",
     "lodash": "^4.17.15",
     "lodash.difference": "^4.5.0",
+    "nodemon": "^2.0.3",
     "nunjucks": "^3.2.1"
   }
 }
