@@ -3,14 +3,14 @@
 {% block body %}
 <h1 class="jupiter"> Results</h1>
 
-<div style="display:flex;">
-    <form method="POST" action="/download">
-        <input type="submit" class="btn" value="Download csv" />
-        <input type="hidden" value="{{ questions | dump }}" name="questions" />
-    </form>
-
-    <a href="/"class="btn">Choose New File</a>
-
+<div class="btn-group">
+  <form method="POST" action="/download" class="btn-group__btn">
+    <input type="submit" class="btn" value="Download csv" />
+    <input type="hidden" value="{{ questions | dump }}" name="questions" />
+  </form>
+  <a href="/" class="btn-group__btn"
+    ><input type="submit" class="btn" value="Choose New File"
+  /></a>
 </div>
 
 <table class="table">
