@@ -5,8 +5,6 @@
 <img width="180" height="180" src="static/img/android-chrome-256x256.png" alt="eq-extract-questions logo">
 
 
-Badges ...
-
 ![MIT license](https://img.shields.io/github/license/ONSDigital/eq-extract-questions.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ONSDigital/eq-extract-questions.svg)
 ![GitHub release](https://img.shields.io/github/release/onsdigital/eq-extract-questions.svg)
