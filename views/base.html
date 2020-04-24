@@ -3,18 +3,47 @@
 
 <head>
     {% block head %}
-    
-    <link
-      rel="stylesheet"
-      href="https://cdn.ons.gov.uk/sdc/v2.0.0/css/responsive.css"
-    />
     <meta charset="UTF-8">
-    <title>EQ Author Extract Questions</title>
+    <title>EQ Extract Questions</title>
+    <link rel="stylesheet" href="https://cdn.ons.gov.uk/sdc/v2.0.0/css/responsive.css"/>
     {% endblock %}
 
 </head>
 
 <body>
+  {% block header %}
+      <header class="header header--internal header--thin">
+      <div class="header__top" role="banner">
+        <div class="container">
+          <div
+            class="header__grid-top grid grid--gutterless grid--flex grid--between grid--vertical-center grid--no-wrap"
+          >
+            <div class="grid__col col-auto">
+              <a class="header__logo-link" href="#">
+                <img
+                  class="header__logo"
+                  src="img/ons-logo-white.svg"
+                  alt="Office for National Statistics logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="container">
+          <div
+            class="grid grid--gutterless grid--flex grid--between grid--vertical-center grid--no-wrap"
+          >
+            <div class="grid__col col-auto u-flex-shrink">
+              <div class="header__title">{{ title }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  {% endblock %}
+
 
  {% block body %}
  {% endblock %}

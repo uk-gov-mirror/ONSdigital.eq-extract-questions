@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(express.static('public'))
+app.use(express.static('static'))
 
 nunjucks.configure("views", {
   autoescape: true,
@@ -16,14 +16,14 @@ nunjucks.configure("views", {
 });
 
 app.get('/', function (req, res) {
-    res.render('index.html');
+    res.render('index.html', { title: "Extract Question Codes and Titles" });
 });
 
 app.post('/',
     fileUpload(),
     processQuestionnaire,
     (req, res) => {
-        res.render("results.html", { questions: res.locals.questions });
+        res.render("results.html", { questions: res.locals.questions, title: "Results" });
     }
 )
 

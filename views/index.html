@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 
  {% block body %}
-
-    <h1 class="jupiter">Extract Question Codes and Titles</h1>
-    <hr/>
-
-    <form method="POST" enctype="multipart/form-data" >
-        Select questionnaire json file: 
-        <input type="file" name="jsonFile" required />
-        <input type="submit" class="btn" value="View Results" />
-    </form>
-
+    <div class="container">
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <form method="POST" enctype="multipart/form-data" id="upload-form">
+                    <div class="field">
+                        <label class="label venus">Select questionnaire json file: </label>
+                        <input class="input" type="file" name="jsonFile" required />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <button  type="submit" class="btn" form="upload-form">View results</button>
+            </div>
+        </div>
+    </div>
  {% endblock %}
