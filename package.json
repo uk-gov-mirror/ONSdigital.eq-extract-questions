@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start_service": "node server.js",
-    "start_developer" : "nodemon server.js"
+    "start_dev" : "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +19,10 @@
     "lodash.difference": "^4.5.0",
     "nodemon": "^2.0.3",
     "nunjucks": "^3.2.1"
+  },
+  "nodemonConfig": {
+    "ignore": ["test/*", "docs/*"],
+    "delay": "2500",
+    "ext": "js,json"
   }
 }
