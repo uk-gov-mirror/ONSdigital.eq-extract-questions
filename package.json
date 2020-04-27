@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start_service": "node server.js",
-    "start_dev" : "nodemon server.js"
+    "start_dev": "nodemon server.js",
+    "test": "./scripts/test.sh"
   },
   "author": "",
   "license": "ISC",
@@ -14,14 +14,36 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.7-alpha.1",
+    "jest": "^25.4.0",
     "json2csv": "^5.0.0",
     "lodash": "^4.17.15",
     "lodash.difference": "^4.5.0",
     "nodemon": "^2.0.3",
     "nunjucks": "^3.2.1"
   },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!config/**/*",
+      "!coverage/**/*",
+      "!tests/**/*",
+      "!**/tests/**/*",
+      "!scripts/*",
+      "!middleware/index.js",
+      "!index.js"
+    ],
+    "watchPathIgnorePatterns": [
+      "data/"
+    ]
+  },
   "nodemonConfig": {
-    "ignore": ["test/*", "docs/*"],
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
     "delay": "2500",
     "ext": "js,json,html"
   }

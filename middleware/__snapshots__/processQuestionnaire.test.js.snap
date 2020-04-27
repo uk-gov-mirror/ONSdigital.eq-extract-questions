@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing processQuestionnaire should return a json object matching snapshot 1`] = `
+Array [
+  Object {
+    "answers": Array [
+      Object {
+        "default": 0,
+        "id": "number-of-employees-total",
+        "label": "Total number of employees",
+        "mandatory": false,
+        "q_code": "50",
+        "type": "Number",
+      },
+    ],
+    "description": "An employee is anyone aged 16 years or over that your organisation directly pays from its payroll(s), in return for carrying out a full-time or part-time job or being on a training scheme.",
+    "guidance": Object {
+      "content": Array [
+        Object {
+          "list": Array [
+            "all workers paid directly from this business’s payroll(s)",
+            "those temporarily absent but still being paid, for example on maternity leave",
+          ],
+          "title": "Include",
+        },
+        Object {
+          "list": Array [
+            "agency workers paid directly from the agency payroll",
+            "voluntary workers",
+            "former employees only receiving a pension",
+            "self-employed workers",
+            "working owners who are not paid via PAYE",
+          ],
+          "title": "Exclude:",
+        },
+      ],
+    },
+    "id": "number-of-employees-total-question",
+    "title": "On {{metadata['ref_p_start_date']|format_date}}, what was the number of employees for {{ first_non_empty_item(metadata['trad_as'], metadata['ru_name']) }}?",
+    "type": "General",
+  },
+  Object {
+    "answers": Array [
+      Object {
+        "id": "confirm-zero-employees-answer",
+        "mandatory": true,
+        "options": Array [
+          Object {
+            "label": "Yes this is correct",
+            "value": "Yes",
+          },
+          Object {
+            "label": "No I need to change this",
+            "value": "No",
+          },
+        ],
+        "q_code": "d50",
+        "type": "Radio",
+      },
+    ],
+    "id": "confirm-zero-employees-question",
+    "title": "On {{metadata['ref_p_start_date']|format_date}}, the number of employees for {{ first_non_empty_item(metadata['trad_as'], metadata['ru_name']) }} was <em>0</em>, is this correct?",
+    "type": "General",
+  },
+  Object {
+    "answers": Array [
+      Object {
+        "id": "number-of-employees-male-more-30-hours",
+        "label": "Number of male employees working more than 30 hours per week",
+        "mandatory": false,
+        "max_value": Object {
+          "answer_id": "number-of-employees-total",
+        },
+        "q_code": "51",
+        "type": "Number",
+      },
+      Object {
+        "id": "number-of-employees-male-less-30-hours",
+        "label": "Number of male employees working 30 hours or less per week",
+        "mandatory": false,
+        "max_value": Object {
+          "answer_id": "number-of-employees-total",
+        },
+        "q_code": "52",
+        "type": "Number",
+      },
+      Object {
+        "id": "number-of-employees-female-more-30-hours",
+        "label": "Number of female employees working more than 30 hours per week",
+        "mandatory": false,
+        "max_value": Object {
+          "answer_id": "number-of-employees-total",
+        },
+        "q_code": "53",
+        "type": "Number",
+      },
+      Object {
+        "id": "number-of-employees-female-less-30-hours",
+        "label": "Number of female employees working 30 hours or less per week",
+        "mandatory": false,
+        "max_value": Object {
+          "answer_id": "number-of-employees-total",
+        },
+        "q_code": "54",
+        "type": "Number",
+      },
+    ],
+    "calculations": Array [
+      Object {
+        "answers_to_calculate": Array [
+          "number-of-employees-male-more-30-hours",
+          "number-of-employees-male-less-30-hours",
+          "number-of-employees-female-more-30-hours",
+          "number-of-employees-female-less-30-hours",
+        ],
+        "calculation_type": "sum",
+        "conditions": Array [
+          "equals",
+        ],
+        "value": 0,
+      },
+      Object {
+        "answer_id": "number-of-employees-total",
+        "answers_to_calculate": Array [
+          "number-of-employees-male-more-30-hours",
+          "number-of-employees-male-less-30-hours",
+          "number-of-employees-female-more-30-hours",
+          "number-of-employees-female-less-30-hours",
+        ],
+        "calculation_type": "sum",
+        "conditions": Array [
+          "equals",
+        ],
+      },
+    ],
+    "guidance": Object {
+      "content": Array [
+        Object {
+          "list": Array [
+            "all workers paid directly from this business’s payroll(s)",
+            "those temporarily absent but still being paid, for example on maternity leave",
+          ],
+          "title": "Include",
+        },
+        Object {
+          "list": Array [
+            "agency workers paid directly from the agency payroll",
+            "voluntary workers",
+            "former employees only receiving a pension",
+            "self-employed workers",
+            "working owners who are not paid via PAYE",
+          ],
+          "title": "Exclude:",
+        },
+      ],
+    },
+    "id": "number-of-employees-split-question",
+    "title": "Of the <em>{{answers['number-of-employees-total']}}</em> total employees employed on {{metadata['ref_p_start_date']|format_date}}, how many male and female employees worked the following hours?",
+    "type": "Calculated",
+  },
+  Object {
+    "answers": Array [
+      Object {
+        "description": "",
+        "id": "please-explain-any-changes",
+        "label": "Comments",
+        "mandatory": false,
+        "max_length": 2000,
+        "q_code": "146",
+        "type": "TextArea",
+      },
+    ],
+    "description": "<p>If you provide comments we are less likely to contact you with data queries.</p>",
+    "id": "comment-question",
+    "title": "Please explain any changes in your figures from the previous return, if applicable.",
+    "type": "General",
+  },
+]
+`;
