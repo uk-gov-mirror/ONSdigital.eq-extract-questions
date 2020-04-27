@@ -1,4 +1,4 @@
-const { parse,transforms: { unwind } } = require("json2csv");
+const { parse, transforms: { unwind } } = require("json2csv")
 
 const fields = [
   "id",
@@ -6,13 +6,13 @@ const fields = [
   "answers.id",
   "answers.label",
   "answers.options.label",
-  "answers.options.value",
-];
+  "answers.options.value"
+]
 
-const transforms = [unwind({ paths: ["answers", "answers.options"] })];
+const transforms = [unwind({ paths: ["answers", "answers.options"] })]
 
 module.exports = (req, res) => {
-    const data = parse(JSON.parse(req.body.questions), { fields, transforms });
-    res.attachment("questions.csv");
-    res.send(data);
-};
+  const data = parse(JSON.parse(req.body.questions), { fields, transforms })
+  res.attachment("questions.csv")
+  res.send(data)
+}
