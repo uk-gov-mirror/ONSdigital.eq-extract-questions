@@ -19,12 +19,9 @@
         <div class="grid__col col-12@m">
             <table class="table">
                 <thead class="table--head">
-                <th class="table--header--cell">Question Id </th>
                 <th class="table--header--cell">Question Title</th>
-                <th class="table--header--cell">Answers Id</th>
                 <th class="table--header--cell">Answers Label</th>
                 <th class="table--header--cell">Options Label</th>
-                <th class="table--header--cell">Options Value</th>
                 </thead>
                 <tbody>
                 {%for question in questions %}
@@ -33,13 +30,7 @@
                             {%for option in answer.options %}
                                 <tr class="table--row">
                                     <td class="table--cell">
-                                        {{question.id }}
-                                    </td>
-                                    <td class="table--cell">
                                         {{ question.title }}
-                                    </td>
-                                    <td class="table--cell">
-                                        {{ answer.id }}
                                     </td>
                                     <td class="table--cell">
                                         {{ answer.label }}
@@ -47,26 +38,16 @@
                                     <td class="table--cell">
                                         {{ option.label }}
                                     </td>
-                                    <td class="table--cell">
-                                        {{ option.value }}
-                                    </td>
                                 </tr>
                             {% endfor %}
                         {% else %}
                             <tr class="table--row">
                                 <td class="table--cell">
-                                    {{question.id }}
-                                </td>
-                                <td class="table--cell">
                                     {{ question.title }}
-                                </td>
-                                <td class="table--cell">
-                                    {{ answer.id }}
                                 </td>
                                 <td class="table--cell">
                                     {{ answer.label }}
                                 </td>
-                                <td class="table--cell"></td>
                                 <td class="table--cell"></td>
                             </tr>
                         {% endif %}
