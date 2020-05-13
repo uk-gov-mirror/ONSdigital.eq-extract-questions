@@ -30,7 +30,7 @@
                             {%for option in answer.options %}
                                 <tr class="table--row">
                                     <td class="table--cell">
-                                        {{ question.title | striptags 
+                                        {{ question.title | safe 
                                             | replace("metadata", "")
                                             | replace("{{ ", "")
                                             | replace(" }}", "")
@@ -49,7 +49,7 @@
                         {% else %}
                             <tr class="table--row">
                                 <td class="table--cell">
-                                    {{ question.title | striptags 
+                                    {{ question.title | safe 
                                             | replace("metadata", "")
                                             | replace("{{ ", "")
                                             | replace(" }}", "")
