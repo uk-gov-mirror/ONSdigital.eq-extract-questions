@@ -30,13 +30,13 @@
                             {%for option in answer.options %}
                                 <tr class="table--row">
                                     <td class="table--cell">
-                                        {{ question.title
-                                            .replace("metadata", "")
-                                            .replace("{{ ", "") 
-                                            .replace(" }}", "")
-                                            .replace("']", "]")
-                                            .replace("['", "[") 
-                                            .replace("&apos;","'") }}
+                                        {{ question.title | striptags 
+                                            | replace("metadata", "")
+                                            | replace("{{ ", "")
+                                            | replace(" }}", "")
+                                            | replace("']", "]")
+                                            | replace("['", "[") 
+                                            | replace("&apos;","'") }}
                                     </td>
                                     <td class="table--cell">
                                         {{ answer.label }}
@@ -49,13 +49,13 @@
                         {% else %}
                             <tr class="table--row">
                                 <td class="table--cell">
-                                    {{ question.title
-                                            .replace("metadata", "")
-                                            .replace("{{ ", "") 
-                                            .replace(" }}", "")
-                                            .replace("']", "]")
-                                            .replace("['", "[") 
-                                            .replace("&apos;","'") }}
+                                    {{ question.title | striptags 
+                                            | replace("metadata", "")
+                                            | replace("{{ ", "")
+                                            | replace(" }}", "")
+                                            | replace("']", "]")
+                                            | replace("['", "[") 
+                                            | replace("&apos;","'") }}
                                 </td>
                                 <td class="table--cell">
                                     {{ answer.label }}
