@@ -4,16 +4,19 @@ const fileUpload = require('express-fileupload')
 const processQuestionnaire = require(`./middleware/processQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
 const bodyParser = require("body-parser")
+const { parseQuestionText } = require(`./utils/runner_utils`)
 
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('static'))
 
-nunjucks.configure("views", {
+const env = nunjucks.configure("views", {
   autoescape: true,
   express: app
 })
+
+env.addFilter('parseQuestionText', parseQuestionText)
 
 app.get('/', function (req, res) {
   res.render('index.html', { title: "Extract Question Codes and Titles" })
