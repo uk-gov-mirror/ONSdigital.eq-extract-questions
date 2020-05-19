@@ -26,7 +26,7 @@ app.post('/',
   fileUpload(),
   processQuestionnaire,
   (req, res) => {
-    res.render("results.html", { questions: res.locals.questions, title: "Results" })
+    res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
