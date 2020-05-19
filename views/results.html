@@ -20,6 +20,7 @@
             <table class="table">
                 <thead class="table--head">
                 <th class="table--header--cell">Question Title</th>
+                <th class="table--header--cell">Answers Type</th>
                 <th class="table--header--cell">Answers Label</th>
                 <th class="table--header--cell">Options Label</th>
                 </thead>
@@ -33,6 +34,9 @@
                                         {{ question.title | parseQuestionText | safe  }}
                                     </td>
                                     <td class="table--cell">
+                                        {{ answer.type }}
+                                    </td>
+                                    <td class="table--cell">
                                         {{ answer.label }}
                                     </td>
                                     <td class="table--cell">
@@ -44,6 +48,9 @@
                             <tr class="table--row">
                                 <td class="table--cell">
                                     {{ question.title  | parseQuestionText | safe }}
+                                </td>
+                                <td class="table--cell">
+                                    {{ answer.type }}
                                 </td>
                                 <td class="table--cell">
                                     {{ answer.label }}
