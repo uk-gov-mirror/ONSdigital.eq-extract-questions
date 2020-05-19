@@ -1,6 +1,7 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const fileUpload = require('express-fileupload')
+const parseQuestionnaire = require(`./middleware/parseQuestionnaire`)
 const processRunnerQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
 const processAuthorQuestionnaire = require(`./middleware/processAuthorQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
@@ -11,6 +12,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('static'))
+const jsonParser = bodyParser.json({ limit: "10mb" })
 
 const env = nunjucks.configure("views", {
   autoescape: true,
@@ -25,6 +27,15 @@ app.get('/', function (req, res) {
 
 app.post('/runner-upload',
   fileUpload(),
+  parseQuestionnaire,
+  processRunnerQuestionnaire,
+  (req, res) => {
+    res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
+  }
+)
+
+app.post('/runner-json',
+  parseQuestionnaire,
   processRunnerQuestionnaire,
   (req, res) => {
     res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
@@ -33,6 +44,16 @@ app.post('/runner-upload',
 
 app.post('/author-upload',
   fileUpload(),
+  parseQuestionnaire,
+  processAuthorQuestionnaire,
+  (req, res) => {
+    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+  }
+)
+
+app.get('/author-json',
+  jsonParser,
+  parseQuestionnaire,
   processAuthorQuestionnaire,
   (req, res) => {
     res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
