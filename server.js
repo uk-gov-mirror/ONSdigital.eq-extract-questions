@@ -2,6 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const fileUpload = require('express-fileupload')
 const parseQuestionnaire = require(`./middleware/parseQuestionnaire`)
+const fetchSchema = require(`./middleware/fetchSchema`)
 const processRunnerQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
 const processAuthorQuestionnaire = require(`./middleware/processAuthorQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
@@ -42,6 +43,15 @@ app.post('/runner-json',
   }
 )
 
+app.get('/runner-url',
+  jsonParser,
+  fetchSchema,
+  processRunnerQuestionnaire,
+  (req, res) => {
+    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+  }
+)
+
 app.post('/author-upload',
   fileUpload(),
   parseQuestionnaire,
@@ -54,6 +64,15 @@ app.post('/author-upload',
 app.get('/author-json',
   jsonParser,
   parseQuestionnaire,
+  processAuthorQuestionnaire,
+  (req, res) => {
+    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+  }
+)
+
+app.get('/author-url',
+  jsonParser,
+  fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
     res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
