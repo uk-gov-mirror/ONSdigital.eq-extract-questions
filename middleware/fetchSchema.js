@@ -2,12 +2,12 @@ const request = require("request-promise-native")
 
 const getQuestionnaireFromURL = async (req, res, next) => {
   try {
-    if (!req.body.url) {
-      throw new Error(`missing url in json body`)
+    if (!req.body.url && !req.query.url) {
+      throw new Error(`missing url in request`)
     }
     const options = {
       json: true,
-      uri: req.body.url
+      uri: req.body.url || req.query.url
     }
     const response = await request(options)
     res.locals.questionnaire = response
