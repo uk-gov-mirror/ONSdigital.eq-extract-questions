@@ -1,0 +1,2567 @@
+{
+    "theme": "default",
+    "metadata": [
+      {
+        "id": "33705574-b577-4c1f-a0a3-0ca9b3f7ff7c",
+        "key": "ru_name",
+        "alias": "Ru Name",
+        "type": "Text",
+        "textValue": "ESSENTIAL ENTERPRISE LTD."
+      },
+      {
+        "id": "0b10fa5e-a18e-4c90-85a4-5be64e3612c5",
+        "key": "trad_as",
+        "alias": "Trad As",
+        "type": "Text",
+        "textValue": "ESSENTIAL ENTERPRISE LTD."
+      },
+      {
+        "id": "b0a339f1-bc84-4180-a03c-bc7079f10e6c",
+        "key": "period_id",
+        "alias": "Period Id",
+        "type": "Text",
+        "textValue": "201605"
+      },
+      {
+        "id": "26590499-d589-42b1-b063-8e7398e80d55",
+        "key": "ref_p_start_date",
+        "alias": "Start Date",
+        "type": "Date",
+        "dateValue": "2016-05-01"
+      },
+      {
+        "id": "276a70f7-c291-456e-a3d6-77a2a7a0df52",
+        "key": "ref_p_end_date",
+        "alias": "End Date",
+        "type": "Date",
+        "dateValue": "2016-06-12"
+      }
+    ],
+    "version": 14,
+    "summary": true,
+    "shortTitle": "Wave 1 final Covid-19 survey",
+    "createdAt": "2020-03-15T12:45:22.412Z",
+    "surveyVersion": "1",
+    "sections": [
+      {
+        "id": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+        "title": "<p>Financial performance of your business</p>",
+        "introductionEnabled": false,
+        "pages": [
+          {
+            "id": "53427413-02bd-45ec-bf13-066ec13177d2",
+            "pageType": "QuestionPage",
+            "title": "<p>Was the financial performance of <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> outside of normal expectations in the <em>last two weeks</em>? </p>",
+            "description": "<p>Normal expectations means normal for this time of year, or as a result of expected outcomes of standard business activities</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "8e9c789d-1aa8-4251-88dd-bd6893ec7039",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "1",
+                "type": "Radio",
+                "questionPageId": "53427413-02bd-45ec-bf13-066ec13177d2",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "57dfba12-baa7-4bb2-9eb7-65164e14f052",
+                    "label": "Yes",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "0e43a083-7d10-477b-aa56-14c0cb830000",
+                    "label": "No",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "a840f38a-b2e1-4cd1-8aff-cca143af095e",
+              "else": {
+                "id": "6890b43a-1669-4b99-a4e0-66ef1442b08b",
+                "pageId": "eaf6a632-d178-48c1-9993-f1e097ac0268"
+              },
+              "rules": [
+                {
+                  "id": "20a638c2-9725-4108-920c-6fd04ab27e93",
+                  "destination": {
+                    "id": "d61936f3-d336-4cc9-aca2-02f684c466ab",
+                    "pageId": "f7429291-fcb5-4bc0-bcac-965b23326462"
+                  },
+                  "expressionGroup": {
+                    "id": "b36cb5ba-6c24-4dbd-8732-575e72f2e64c",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "ff7d3fe4-5fcd-4656-880b-0255c7c27ae0",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "8e9c789d-1aa8-4251-88dd-bd6893ec7039",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "0e43a083-7d10-477b-aa56-14c0cb830000"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "1",
+            "guidance": null,
+            "definitionLabel": "What we mean by \"normal expectations\"",
+            "definitionContent": "<p>This means usual for this time of year, or as a result of expected outcomes of standard business activities.</p>",
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "eaf6a632-d178-48c1-9993-f1e097ac0268",
+            "pageType": "QuestionPage",
+            "title": "<p>Was <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s turnover <em>within its normal range</em> in the last two weeks?  </p>",
+            "description": "<p>&#x27;Normal range&#x27; means within expectations for this time of year, or as a result of expected outcomes of standard business activities </p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "e899d289-bd50-46c7-ab4f-e627fa8229d8",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "2",
+                "type": "Radio",
+                "questionPageId": "eaf6a632-d178-48c1-9993-f1e097ac0268",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "8de3dc22-8411-47f4-bb20-f1bed432ce6a",
+                    "label": "Yes, it was within the normal range ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "e17572e6-a452-4b2f-a751-25ad35c08064",
+                    "label": "No, it was outside the normal range ",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "4599d3cc-5f0b-4dff-992d-d7c2511c596c",
+              "else": {
+                "id": "0bbd6d5e-afa8-4d60-a9b8-3413c2fd9468",
+                "logical": "NextPage"
+              },
+              "rules": [
+                {
+                  "id": "f6f39c68-a4c5-4069-83c2-25877e1e5357",
+                  "destination": {
+                    "id": "fab1393b-570a-4505-b20d-29abeaf44aed",
+                    "pageId": "f7429291-fcb5-4bc0-bcac-965b23326462"
+                  },
+                  "expressionGroup": {
+                    "id": "7e7e2974-0968-4f25-a593-ac3272fee62f",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "9035f2ba-4335-4e82-93a5-733cffca302f",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "e899d289-bd50-46c7-ab4f-e627fa8229d8",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "8de3dc22-8411-47f4-bb20-f1bed432ce6a"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "2",
+            "guidance": "",
+            "definitionLabel": "What we mean by \"normal range\"",
+            "definitionContent": "<p>This means within expectations for this time of year, or as a result of expected outcomes of standard business activities.</p>",
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "48812f98-f5f8-4c94-bd8b-9340dc23773c",
+            "pageType": "QuestionPage",
+            "title": "<p>In what way was <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s turnover outside its normal range in the last two weeks? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": true,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "365deba7-00ab-4018-b621-ddb9b5eb60b2",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "3",
+                "type": "Radio",
+                "questionPageId": "48812f98-f5f8-4c94-bd8b-9340dc23773c",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "5d8c8375-a41e-42d0-8497-0b3946267fdf",
+                    "label": "Turnover was higher than normal",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "8ff91170-a4ee-44a4-ac6c-753255032097",
+                    "label": "Turnover was lower than normal",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": null,
+            "alias": "2a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": "<p><strong>Exclude:</strong></p><ul><li>change expected due to seasonal effects </li><li>change expected due to normal patterns of business activity </li></ul>",
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "8168dd85-586d-43b5-b774-c7e288c3b023",
+            "pageType": "QuestionPage",
+            "title": "<p>What do you think were the main causes for <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s turnover being outside its normal range in the last two weeks? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "876c4aa5-79a7-4190-819b-8322ad57172b",
+                "description": "",
+                "guidance": "",
+                "label": "Select all that apply",
+                "qCode": "",
+                "type": "Checkbox",
+                "questionPageId": "8168dd85-586d-43b5-b774-c7e288c3b023",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "cfa902c9-43ec-471b-a051-7f00481f0e92",
+                    "label": "Coronavirus (COVID-19) outbreak",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "41"
+                  },
+                  {
+                    "id": "b558fbc6-9f84-47c5-a6cb-be35eeb69c82",
+                    "label": "Other",
+                    "additionalAnswer": {
+                      "id": "2a7892cf-c1a5-49b3-91c7-579a637a97fd",
+                      "description": "",
+                      "label": "Please describe",
+                      "type": "TextField",
+                      "properties": {
+                        "required": false
+                      },
+                      "validation": {
+                        
+                      },
+                      "guidance": null,
+                      "secondaryLabel": null
+                    },
+                    "description": null,
+                    "qCode": "42"
+                  }
+                ],
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "2b",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null,
+            "totalValidation": null
+          },
+          {
+            "id": "0bf14da5-6919-4507-8542-5d71be2e6ac1",
+            "pageType": "QuestionPage",
+            "title": "<p>Please explain in more detail why <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s turnover was affected </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "b27dfc7c-ac12-4c9f-ba1c-29b51878d877",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "5",
+                "type": "TextArea",
+                "questionPageId": "0bf14da5-6919-4507-8542-5d71be2e6ac1",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "2c",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "f7429291-fcb5-4bc0-bcac-965b23326462",
+            "pageType": "QuestionPage",
+            "title": "<p>What are your expectations about <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s turnover in the <em>next two weeks</em>?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "d5b52b23-ea6f-4ef3-89c2-4b2a38ce25f1",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "6",
+                "type": "Radio",
+                "questionPageId": "f7429291-fcb5-4bc0-bcac-965b23326462",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "33565ab9-e62d-4cef-8bb0-607606dcb9cb",
+                    "label": "Expect turnover to increase",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "4f0992ea-93a3-4208-ae17-31bd6846327b",
+                    "label": "Expect turnover to decrease",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "322dcfcd-de8c-4d7a-94c2-6c1869008300",
+                    "label": "Expect turnover to stay the same ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "5c86dcba-60e9-4b25-9c78-76a4050e2e96",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "6d4ad5c4-0082-486b-ab5a-1ca0ba2e3728",
+              "else": {
+                "id": "a6b23ec3-c38f-470b-b216-4c13a981ed97",
+                "pageId": "08aeb0f6-74fc-4e0d-9fd5-f7574a9058fd"
+              },
+              "rules": [
+                {
+                  "id": "c7bba671-cfff-4ace-9ad7-ceb33d0943f1",
+                  "destination": {
+                    "id": "6dad8237-decb-4d08-b886-f8b75c89ea63",
+                    "pageId": "33a858a0-b55c-494f-9798-84b75fccc1f0"
+                  },
+                  "expressionGroup": {
+                    "id": "b936dead-fcc3-43e9-b614-6f233ee10e98",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "6712d0ec-0763-47c2-b550-80550772376e",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "8e9c789d-1aa8-4251-88dd-bd6893ec7039",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "0e43a083-7d10-477b-aa56-14c0cb830000"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "2d",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "08aeb0f6-74fc-4e0d-9fd5-f7574a9058fd",
+            "pageType": "QuestionPage",
+            "title": "<p>Has <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s exporting of goods or services been affected by the coronavirus (COVID-19) outbreak in the last two weeks?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "acd383d5-3919-4ae7-bd6d-d8022528978e",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "7",
+                "type": "Radio",
+                "questionPageId": "08aeb0f6-74fc-4e0d-9fd5-f7574a9058fd",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "071a9fe3-fe9b-42ea-b6e8-bba36a47eba2",
+                    "label": "Yes",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "3d43535e-eecc-4d50-add8-b42de081eebf",
+                    "label": "No",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "1a4403e8-32e8-4e3c-a4ac-6c6073a12882",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ],
+                "secondaryLabel": null
+              }
+            ],
+            "routing": {
+              "id": "8d7dbf97-29dc-468b-afad-7a77cde69548",
+              "else": {
+                "id": "2b2fbe97-edbd-4c75-952b-627f8a950304",
+                "logical": "NextPage"
+              },
+              "rules": [
+                {
+                  "id": "4c9b32d7-e883-4554-8d23-ea1caf82ce29",
+                  "destination": {
+                    "id": "97f2ae05-bd9f-44fa-9ae8-dd52280fdb08",
+                    "pageId": "33a858a0-b55c-494f-9798-84b75fccc1f0"
+                  },
+                  "expressionGroup": {
+                    "id": "b3bbefa5-9bdc-4d01-a891-670ab7cc5e3a",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "d358eda1-a143-41a5-983f-61db76aba7d1",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "acd383d5-3919-4ae7-bd6d-d8022528978e",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "3d43535e-eecc-4d50-add8-b42de081eebf"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "3c5997d9-29bc-43ad-adc5-bff636cf6227",
+                  "destination": {
+                    "id": "b1334072-6b50-4568-a667-49e655466a07",
+                    "pageId": "b49c9fa1-a560-46a0-aa6e-3a68f9f60972"
+                  },
+                  "expressionGroup": {
+                    "id": "b10ccc90-38ef-4fc7-ba09-d3cd89550437",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "c72fac99-95c4-499a-bd89-14aa41c1cbef",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "acd383d5-3919-4ae7-bd6d-d8022528978e",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "1a4403e8-32e8-4e3c-a4ac-6c6073a12882"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "3",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": "<p>Include goods and services</p>",
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "4728c544-95e8-4d1f-a5c7-d2fc3a95f180",
+            "pageType": "QuestionPage",
+            "title": "<p>Please explain in more detail how <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s exporting has been affected </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "3c6cef19-ffc2-4283-9cc9-bd356713b0f2",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "8",
+                "type": "TextArea",
+                "questionPageId": "4728c544-95e8-4d1f-a5c7-d2fc3a95f180",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "3a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "33a858a0-b55c-494f-9798-84b75fccc1f0",
+            "pageType": "QuestionPage",
+            "title": "<p>What are your expectations about <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s exporting of goods or services in the <em>next two weeks</em>?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "1941ed6e-ccbb-48e4-a1dc-b06c137479ce",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "9",
+                "type": "Radio",
+                "questionPageId": "33a858a0-b55c-494f-9798-84b75fccc1f0",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "b9818239-ee18-424b-8719-e444d048b172",
+                    "label": "It will get harder",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "46b57789-aeb8-41b9-ab35-69080cd7e72d",
+                    "label": "It will get easier",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "e61248c6-fc8d-4aa8-84bd-c951b74a4836",
+                    "label": "It will stay the same",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "449045ac-7b8d-4f0b-ab39-dc9b92e9115c",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "f5dd1a78-bf06-4f8a-906c-8c277ae4e899",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "614b90cd-a85e-403a-81d2-293995dc002b",
+              "else": {
+                "id": "e5b93956-4ddd-41f2-a47b-351364999dc2",
+                "pageId": "b49c9fa1-a560-46a0-aa6e-3a68f9f60972"
+              },
+              "rules": [
+                {
+                  "id": "e443cc51-66b4-4303-b9d1-28ea52f07e37",
+                  "destination": {
+                    "id": "40a056e7-cc3e-4bf0-a20e-0027fcf9b516",
+                    "pageId": "e8dec512-dc7e-4bd9-9beb-b3ec953cae8d"
+                  },
+                  "expressionGroup": {
+                    "id": "a51e58e1-6b55-4b27-b295-2ea6a4135213",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "d79e322b-fa1b-4888-9d29-8585cb0933a4",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "8e9c789d-1aa8-4251-88dd-bd6893ec7039",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "0e43a083-7d10-477b-aa56-14c0cb830000"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "3b",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "b49c9fa1-a560-46a0-aa6e-3a68f9f60972",
+            "pageType": "QuestionPage",
+            "title": "<p>Was <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s <em>importing </em>of materials, goods or services affected by the coronavirus (COVID-19) outbreak in the last two weeks?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "36f90274-fd9c-453e-ba2f-7c083ada2f73",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "10",
+                "type": "Radio",
+                "questionPageId": "b49c9fa1-a560-46a0-aa6e-3a68f9f60972",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "441cd5b6-a38e-4f0c-baef-bdec2a11708e",
+                    "label": "Yes",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "55fea0f1-c1ad-45b7-b764-a0e44853e48f",
+                    "label": "No",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "cb21f907-a10b-4fb3-87cd-1b9dd1a6ab1d",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "6ef02a9c-c382-484a-8409-ab179ce5bfb3",
+              "else": {
+                "id": "73e1260b-dbd9-405b-b30e-5ee2062e170f",
+                "logical": "NextPage"
+              },
+              "rules": [
+                {
+                  "id": "96f444d3-2a6f-48ad-9554-a9189b6b63d6",
+                  "destination": {
+                    "id": "58ed40e7-3d42-46c9-a7af-fbf2f0c5bf13",
+                    "pageId": "e8dec512-dc7e-4bd9-9beb-b3ec953cae8d"
+                  },
+                  "expressionGroup": {
+                    "id": "d532f1fe-8c6e-4dc0-a0d7-ca0c7691afa3",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "7eee3a99-144b-436b-b61b-b8817023098e",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "36f90274-fd9c-453e-ba2f-7c083ada2f73",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "55fea0f1-c1ad-45b7-b764-a0e44853e48f"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "b5728d16-0acd-45b5-ad6c-88ae3801bf44",
+                  "destination": {
+                    "id": "afa355bd-b926-4681-a02c-9f0fcae54a64",
+                    "pageId": "0e1472db-36f2-4d40-b99e-510e70442636"
+                  },
+                  "expressionGroup": {
+                    "id": "5c2e55ac-68a0-4356-9b60-70ff99a63440",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "96337fb9-ae9b-40a8-8cdf-54fa73c054cd",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "36f90274-fd9c-453e-ba2f-7c083ada2f73",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "cb21f907-a10b-4fb3-87cd-1b9dd1a6ab1d"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "4",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "4648511e-cf19-468d-9eed-14c4a92cb720",
+            "pageType": "QuestionPage",
+            "title": "<p>Please explain in more detail how <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s <em>importing</em> has been affected </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "98ea4789-060e-460b-8d33-e688ceb4e947",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "11",
+                "type": "TextArea",
+                "questionPageId": "4648511e-cf19-468d-9eed-14c4a92cb720",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "4a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "e8dec512-dc7e-4bd9-9beb-b3ec953cae8d",
+            "pageType": "QuestionPage",
+            "title": "<p>What are your expectations about <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s importing of materials, goods or services in the <em>next two weeks</em>?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "9b2c8dda-cd96-41ff-8275-7acc9b6c689e",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "12",
+                "type": "Radio",
+                "questionPageId": "33a858a0-b55c-494f-9798-84b75fccc1f0",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "414346cb-0631-419a-861a-92c80304a1c0",
+                    "label": "It will get harder",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "96ecb088-c0dd-4da9-ab26-848053c0e367",
+                    "label": "It will get easier",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "88e6541b-4195-4673-a9cc-43bd3e0ee672",
+                    "label": "It will stay the same",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "27c7deb3-b2d2-4b40-b2bc-ac17e80d6877",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "322dc6b4-dd0b-4790-8120-612c1a952b76",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "e3f033d6-594f-4de9-81e2-4277287131d5",
+              "else": {
+                "id": "a16df604-e45e-46c4-a782-e6154f157274",
+                "pageId": "0e1472db-36f2-4d40-b99e-510e70442636"
+              },
+              "rules": [
+                {
+                  "id": "509bc1b6-4cf8-4bcd-b42e-27adac57e2cc",
+                  "destination": {
+                    "id": "b0356057-c093-4b82-8d59-4f4bee737122",
+                    "pageId": "50821280-75f2-4439-9185-193b934d5131"
+                  },
+                  "expressionGroup": {
+                    "id": "29768d03-44a1-4755-807b-cfc3152d9d8a",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "702e15b0-4fe4-48d5-8c3d-fba5509ab1c9",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "8e9c789d-1aa8-4251-88dd-bd6893ec7039",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "0e43a083-7d10-477b-aa56-14c0cb830000"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "4b",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "0e1472db-36f2-4d40-b99e-510e70442636",
+            "pageType": "QuestionPage",
+            "title": "<p>Was <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> able to get the materials, goods or services it needed <em>from within the UK</em> in the last two weeks? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "478a7145-b712-43a1-9e1d-df39c23abddd",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "13",
+                "type": "Radio",
+                "questionPageId": "0e1472db-36f2-4d40-b99e-510e70442636",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "b3faa5af-040a-4bc6-a1d2-7571b4069ed6",
+                    "label": "Yes, we have been able to  get what we needed",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "ac1dd302-483e-4a4a-b486-e2f949ac878d",
+                    "label": "Yes, but we have had to change suppliers or find alternative solutions",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "c9656ef7-18dc-40ae-b68d-51442c49a312",
+                    "label": "No, we have not been able to get the materials, goods or services we needed",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "275b69f3-c6bb-48b4-9242-f0f710fc2e15",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ],
+                "secondaryLabel": null
+              }
+            ],
+            "routing": {
+              "id": "3157c001-9e04-4b68-8963-baf660281e96",
+              "else": {
+                "id": "87409b2b-4f36-4958-97da-f37dc1376c4f",
+                "logical": "NextPage"
+              },
+              "rules": [
+                {
+                  "id": "33c71675-6fe9-41ab-8cb7-ae3be254e66e",
+                  "destination": {
+                    "id": "dec7d902-dbcc-4a78-8157-c9fb0059e120",
+                    "pageId": "ce542f26-a704-4dc6-a0ef-292c2739e4e6"
+                  },
+                  "expressionGroup": {
+                    "id": "704a3cba-1664-4644-afd4-72a7f6bf9242",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "03609e49-cc8c-440b-8001-8188444de838",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "478a7145-b712-43a1-9e1d-df39c23abddd",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "b3faa5af-040a-4bc6-a1d2-7571b4069ed6",
+                            "ac1dd302-483e-4a4a-b486-e2f949ac878d",
+                            "275b69f3-c6bb-48b4-9242-f0f710fc2e15"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "5",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null,
+            "totalValidation": null
+          },
+          {
+            "id": "fc873320-2213-4d19-982e-21b826833e1c",
+            "pageType": "QuestionPage",
+            "title": "<p>Please explain why <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> was not able to get the materials, goods or services needed</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "8d48af55-9228-488b-8a15-087c484266c2",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "14",
+                "type": "TextArea",
+                "questionPageId": "fc873320-2213-4d19-982e-21b826833e1c",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "5a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "ce542f26-a704-4dc6-a0ef-292c2739e4e6",
+            "pageType": "QuestionPage",
+            "title": "<p>How did the <em>prices</em> of materials, goods or services needed by <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> change in the last two weeks, compared with normal price fluctuations? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "27b42a40-5f79-4d32-b361-a94a454c638b",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "15",
+                "type": "Radio",
+                "questionPageId": "ce542f26-a704-4dc6-a0ef-292c2739e4e6",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "eac6d4a6-4fbb-45f3-aefe-1e1b9e572cb7",
+                    "label": "Prices generally increased ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "3239db93-c109-4396-b98d-f7444bc19c7f",
+                    "label": "Prices generally decreased ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "14af2dd3-c55b-4a85-b2b8-6fbde74a52fd",
+                    "label": "Some prices increased, some prices decreased",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "ca9d948d-9586-4035-ba36-488307ec2188",
+                    "label": "Prices generally stayed the same ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "3801f6dc-8b32-4872-a8c2-9106f819507b",
+                    "label": "Not applicable ",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "72906779-8c8a-4d48-8ebd-bcf8b19cda84",
+              "else": {
+                "id": "87e29ef7-283e-4aa8-88f2-a7c03b04f239",
+                "pageId": "89e663b4-3ff2-4e68-9d51-1ea33411a407"
+              },
+              "rules": [
+                {
+                  "id": "89f0e1ad-dee3-4691-acdf-ea6b03c3da13",
+                  "destination": {
+                    "id": "93d290db-9c45-4f3a-b5dd-ea5c083fcad5",
+                    "pageId": "50821280-75f2-4439-9185-193b934d5131"
+                  },
+                  "expressionGroup": {
+                    "id": "7e005ba7-1c92-4b14-ad14-25cf6cb20bdf",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "4fc67cf7-b893-402d-954d-193d8b8f6b92",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "27b42a40-5f79-4d32-b361-a94a454c638b",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "3801f6dc-8b32-4872-a8c2-9106f819507b",
+                            "ca9d948d-9586-4035-ba36-488307ec2188"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "6",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "89e663b4-3ff2-4e68-9d51-1ea33411a407",
+            "pageType": "QuestionPage",
+            "title": "<p>Please give more details about the prices of materials, goods or services that changed</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "a7bb01fe-3061-421f-bfee-74e02002c9ed",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "16",
+                "type": "TextArea",
+                "questionPageId": "89e663b4-3ff2-4e68-9d51-1ea33411a407",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "6a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null,
+            "totalValidation": null
+          },
+          {
+            "id": "50821280-75f2-4439-9185-193b934d5131",
+            "pageType": "QuestionPage",
+            "title": "<p>What are your expectations about changes in prices of materials, goods or services that <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> needs for the <em>next two weeks</em>?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "a61f9399-c1cd-4bda-a913-073ae1a54fd0",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "17",
+                "type": "Radio",
+                "questionPageId": "50821280-75f2-4439-9185-193b934d5131",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "2f37837f-dd8d-4cbe-bed2-8797e2119351",
+                    "label": "Expect prices to generally increase",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "e12ae3a0-186e-40a3-a10e-a1fa3fa2fbab",
+                    "label": "Expect prices to generally decrease ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "b924185c-a23b-48fb-9b02-9f45c2d52704",
+                    "label": "Expect prices not to change ",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "6dfe4582-e825-4918-9fcf-db488d9bc292",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "05f947a8-f43c-468f-9f78-7e0c932dc9d3",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "0116c4fd-121b-4f2e-b1a5-bbf4c1d8bf55",
+              "else": {
+                "id": "e3627510-53f3-4c4a-b446-55909b8d1008",
+                "pageId": "83701edb-7ee7-46b9-84f1-a9bc879f6b32"
+              },
+              "rules": [
+                {
+                  "id": "beab818c-3f7b-4907-a718-afa8cae83536",
+                  "destination": {
+                    "id": "51fd6461-898e-4840-aa85-8466781c0091",
+                    "pageId": "13fc69db-bd9a-4996-9724-66a6a6be13c0"
+                  },
+                  "expressionGroup": {
+                    "id": "e5b12c66-a6b9-4ce0-9518-fb3f3b37780a",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "4e7d81d9-5da0-4b57-bda5-2d3801c11a7d",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "8e9c789d-1aa8-4251-88dd-bd6893ec7039",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "0e43a083-7d10-477b-aa56-14c0cb830000"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "6b",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "83701edb-7ee7-46b9-84f1-a9bc879f6b32",
+            "pageType": "QuestionPage",
+            "title": "<p>Did <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> have to change the prices of your goods or services that were <em>sold</em> in the last two weeks?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "9274311d-e7dc-4e3b-8694-0fafc1eb4aae",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "18",
+                "type": "Radio",
+                "questionPageId": "83701edb-7ee7-46b9-84f1-a9bc879f6b32",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "27754cc2-1a37-488f-9751-e138596dfbf4",
+                    "label": "Yes, we generally had to increase our prices",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "83663687-7a4a-44d2-bfc3-e23335d90b9a",
+                    "label": "Yes, we generally had to decrease our prices",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "d4607190-df02-4313-94be-2699a79b7972",
+                    "label": "No, we did not have to change our prices",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "d31ce0f7-2030-43a2-b548-4f71f4630b48",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "eb24ea26-5ad3-4e1e-856d-2aadf1235835",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "9849a76e-79bb-4ea9-844f-12c4f6ac89ea",
+              "else": {
+                "id": "91672f3b-ae0c-4950-aca7-975916f00147",
+                "pageId": "f41e30d1-d01e-472f-9201-be7749d83557"
+              },
+              "rules": [
+                {
+                  "id": "1693bb03-ac50-4493-9d85-6d084da516d9",
+                  "destination": {
+                    "id": "63326a1b-6e76-4b1e-8733-526ee77b99e1",
+                    "pageId": "13fc69db-bd9a-4996-9724-66a6a6be13c0"
+                  },
+                  "expressionGroup": {
+                    "id": "eeda433d-09e0-4fba-9e59-633469499e03",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "de2e1218-d99e-4dd8-8982-5730fe98b3d8",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "9274311d-e7dc-4e3b-8694-0fafc1eb4aae",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "d4607190-df02-4313-94be-2699a79b7972",
+                            "eb24ea26-5ad3-4e1e-856d-2aadf1235835",
+                            "d31ce0f7-2030-43a2-b548-4f71f4630b48"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "7",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "f41e30d1-d01e-472f-9201-be7749d83557",
+            "pageType": "QuestionPage",
+            "title": "<p>Please give more details about how prices changed</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "e3b55e00-f101-4ffe-8c5f-6a3272dfd8cc",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "19",
+                "type": "TextArea",
+                "questionPageId": "89e663b4-3ff2-4e68-9d51-1ea33411a407",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "7a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null,
+            "totalValidation": null
+          },
+          {
+            "id": "13fc69db-bd9a-4996-9724-66a6a6be13c0",
+            "pageType": "QuestionPage",
+            "title": "<p>What are your expectations about prices of goods or services that <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> will <em>sell</em> over the <em>next two weeks</em>?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "8b015ec5-0d31-4f04-b333-b2835f5af8e2",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "20",
+                "type": "Radio",
+                "questionPageId": "13fc69db-bd9a-4996-9724-66a6a6be13c0",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "a788a88f-afec-44d9-b909-ff98c7d01725",
+                    "label": "Prices will generally increase",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "a09d4d9b-af21-4fd3-b085-39b21c52be4e",
+                    "label": "Prices will generally decrease",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "5e189518-2392-4c7c-b1ab-c6900b89afd8",
+                    "label": "Prices will stay the same",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "c06850f9-e9ba-4119-bc30-0edc0e55c878",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "71fdd13a-0887-45c5-b5b8-a54bb7597e2a",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": null,
+            "alias": "7b",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "9256a6e4-f1ee-48c3-b7ef-982020a29255",
+            "pageType": "QuestionPage",
+            "title": "<p>Has <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>’s ability to access financial resources changed in the last two weeks?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "8154419b-8f9c-4f69-b9ff-4888b4a27607",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "21",
+                "type": "Radio",
+                "questionPageId": "9256a6e4-f1ee-48c3-b7ef-982020a29255",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "2d97a6dd-0692-458e-a3c2-22503df6e458",
+                    "label": "Yes, access to finance has increased",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "fc586af3-7142-4159-98d3-6744e1d0cc28",
+                    "label": "Yes, access to finance has decreased",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "8f468c96-9d79-4910-a1d2-6518240fb183",
+                    "label": "No, access to finance has stayed the same",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "15f48d9a-19ff-4573-8326-ca42be9a2c56",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": null,
+            "alias": "8",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "84850293-8fe0-476a-aaca-757d7873713a",
+            "pageType": "QuestionPage",
+            "title": "<p>How confident are you that <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> has the financial resources to continue operating throughout the coronavirus (COVID-19) outbreak?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "1eb203aa-4bab-40a6-9e1f-23df474c70d9",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "22",
+                "type": "Radio",
+                "questionPageId": "84850293-8fe0-476a-aaca-757d7873713a",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "3e9ed713-8d0f-47fc-84b5-bc591b7fb2dd",
+                    "label": "Confident",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "0df4aa28-2847-4dd9-9d9b-1b71c7bae725",
+                    "label": "Not confident",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "77b2437f-44e0-451e-98a6-aef4a595a416",
+                    "label": "Don't know yet",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": null,
+            "alias": "9",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          }
+        ],
+        "alias": "Financial Perform.",
+        "introductionTitle": "<p>Financial performance of your business</p>",
+        "introductionContent": "<p>This section asks for information on any changes during the last two weeks, and expectations for the next two weeks, to:</p><ul><li>your business&#x27;s turnover</li><li>your business&#x27;s imports and exports</li><li>the availability and prices of materials, goods and services</li><li>your business&#x27;s financial resources</li></ul>"
+      },
+      {
+        "id": "1760a554-060f-4e6a-bf64-970f98d84ac7",
+        "title": "<p>Operational performance of your business</p>",
+        "introductionEnabled": false,
+        "pages": [
+          {
+            "id": "9eb7bb06-de72-4db5-ade2-0fa8f14bab54",
+            "pageType": "QuestionPage",
+            "title": "<p>Was <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s workforce able to meet the demands of the business in the <em>last two weeks</em>? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "742bc51a-7bbc-4e34-b785-896ec900e398",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "23",
+                "type": "Radio",
+                "questionPageId": "9eb7bb06-de72-4db5-ade2-0fa8f14bab54",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "63a64704-39bb-4d1c-be92-363ed5869e39",
+                    "label": "Yes, the workforce could meet the business's demands",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "91ddc8b3-fb3b-44ef-9fac-0cd9b8418d2a",
+                    "label": "No, the workforce could not meet the business's demands",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": null,
+            "alias": "10",
+            "sectionId": "1760a554-060f-4e6a-bf64-970f98d84ac7",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "8847456b-89a9-4402-b83e-767855ff51f3",
+            "pageType": "QuestionPage",
+            "title": "<p>What measures has <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> taken to cope with the impact of coronavirus (COVID-19) on your workforce?</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "f9bed876-492b-45a4-a7c7-fee8d580bced",
+                "description": "",
+                "guidance": "",
+                "label": "Select all that apply",
+                "qCode": "",
+                "type": "Checkbox",
+                "questionPageId": "8847456b-89a9-4402-b83e-767855ff51f3",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "16fbc376-9261-457d-bca2-db6dfc9fff41",
+                    "label": "Increased working hours",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "241"
+                  },
+                  {
+                    "id": "adc46609-909d-4cf1-ada8-7c0e7fa8f5f0",
+                    "label": "Decreased working hours",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "242"
+                  },
+                  {
+                    "id": "6b3929fd-9259-4831-b8cd-1606d5ca5dc8",
+                    "label": "Staff are encouraged to work from home",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "243"
+                  },
+                  {
+                    "id": "020144a9-2e9f-4467-8688-409351f697b1",
+                    "label": "Staff have to work from home",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "244"
+                  },
+                  {
+                    "id": "5639db2e-2467-481d-85c5-9279576b44a5",
+                    "label": "Laying off staff in the short term",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "245"
+                  },
+                  {
+                    "id": "73b61fe9-ee2d-48d4-b437-abcd637cafec",
+                    "label": "Recruiting staff for the short term ",
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "246"
+                  },
+                  {
+                    "id": "60936d03-732b-468f-95cd-4d649d41cff1",
+                    "label": "Other",
+                    "additionalAnswer": {
+                      "id": "25e454d5-88a9-4a8d-b1f7-7666b90e69dd",
+                      "description": "",
+                      "label": "Please describe",
+                      "type": "TextField",
+                      "properties": {
+                        "required": false
+                      },
+                      "validation": {
+                        
+                      },
+                      "guidance": null,
+                      "secondaryLabel": null
+                    },
+                    "description": null,
+                    "qCode": "247"
+                  },
+                  {
+                    "id": "c786209e-ed91-43a7-8efd-437a3232023e",
+                    "label": "No measures have been taken",
+                    "mutuallyExclusive": true,
+                    "description": null,
+                    "additionalAnswer": null,
+                    "qCode": "248"
+                  }
+                ],
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "11",
+            "sectionId": "1760a554-060f-4e6a-bf64-970f98d84ac7",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+            "pageType": "QuestionPage",
+            "title": "<p>In the last two weeks, roughly what proportion of your workforce was doing each of the following?</p>",
+            "description": "<p>Your answers should add up to 100%</p>",
+            "descriptionEnabled": true,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "f519e5fb-e84e-434b-ad2a-4ab59eaca658",
+                "description": "Include those who are normally remote workers",
+                "guidance": "",
+                "label": "Working at their normal place of work",
+                "qCode": "251",
+                "type": "Percentage",
+                "questionPageId": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+                "properties": {
+                  "required": true,
+                  "decimals": 0
+                },
+                "validation": {
+                  "minValue": {
+                    "id": "dcd729b9-caf6-4f7d-a1ec-202e53e4db00",
+                    "enabled": false,
+                    "validationType": "minValue",
+                    "entityType": "Custom",
+                    "inclusive": true
+                  },
+                  "maxValue": {
+                    "id": "d3efddbd-4f5d-42c2-84b5-168dfa02a29e",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "inclusive": true,
+                    "custom": 100,
+                    "previousAnswer": null,
+                    "validationType": "maxValue"
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "id": "58e9ecfb-62db-46a9-9d4f-6d370906e51f",
+                "description": "Exclude those who are normally remote workers",
+                "guidance": "",
+                "label": "Working remotely instead of at their normal place of work",
+                "qCode": "252",
+                "type": "Percentage",
+                "questionPageId": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+                "properties": {
+                  "required": true,
+                  "decimals": 0
+                },
+                "validation": {
+                  "minValue": {
+                    "id": "12c6ca27-fd4d-478d-a5b1-43f0e0b46599",
+                    "enabled": false,
+                    "validationType": "minValue",
+                    "entityType": "Custom",
+                    "inclusive": true
+                  },
+                  "maxValue": {
+                    "id": "75f7050f-a99a-4eb8-baa7-fa9e8a776a4b",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "inclusive": true,
+                    "custom": 100,
+                    "previousAnswer": null,
+                    "validationType": "maxValue"
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "id": "93b372c4-587a-4baf-bc8c-8fdd45a164f4",
+                "description": "",
+                "guidance": "",
+                "label": "Off sick with pay",
+                "qCode": "253",
+                "type": "Percentage",
+                "questionPageId": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+                "properties": {
+                  "required": true,
+                  "decimals": 0
+                },
+                "validation": {
+                  "minValue": {
+                    "id": "355c1081-3dcd-40b4-b1ea-5cdbad8119aa",
+                    "enabled": false,
+                    "validationType": "minValue",
+                    "entityType": "Custom",
+                    "inclusive": true
+                  },
+                  "maxValue": {
+                    "id": "474f4da2-1ba9-48f9-b1f6-2aee08f57be6",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "inclusive": true,
+                    "custom": 100,
+                    "previousAnswer": null,
+                    "validationType": "maxValue"
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "id": "c2466e2d-b53f-457a-91d7-8aaa9110d198",
+                "description": "",
+                "guidance": "",
+                "label": "Off sick without pay",
+                "qCode": "254",
+                "type": "Percentage",
+                "questionPageId": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+                "properties": {
+                  "required": true,
+                  "decimals": 0
+                },
+                "validation": {
+                  "minValue": {
+                    "id": "119f7147-d35b-4280-8c13-5c883b99299e",
+                    "enabled": false,
+                    "validationType": "minValue",
+                    "entityType": "Custom",
+                    "inclusive": true
+                  },
+                  "maxValue": {
+                    "id": "ea6e287e-1793-4432-aae6-0b83d8245fb9",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "inclusive": true,
+                    "custom": 100,
+                    "previousAnswer": null,
+                    "validationType": "maxValue"
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "id": "b0d371c4-bd06-4f4b-9b95-84d67d477ce9",
+                "description": "",
+                "guidance": "",
+                "label": "Other unpaid leave",
+                "qCode": "255",
+                "type": "Percentage",
+                "questionPageId": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+                "properties": {
+                  "required": true,
+                  "decimals": 0
+                },
+                "validation": {
+                  "minValue": {
+                    "id": "a9bed3fa-5ae6-48d5-bae5-f62571e894e1",
+                    "enabled": false,
+                    "validationType": "minValue",
+                    "entityType": "Custom",
+                    "inclusive": true
+                  },
+                  "maxValue": {
+                    "id": "022587df-e077-4e61-9c82-6c5316d32452",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "inclusive": true,
+                    "custom": 100,
+                    "previousAnswer": null
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "id": "f8db3172-e903-4586-8ee7-25136fc5e340",
+                "description": "",
+                "guidance": "",
+                "label": "Other",
+                "qCode": "256",
+                "type": "Percentage",
+                "questionPageId": "fa9c366c-c329-46c6-8b3e-16a82e3c5251",
+                "properties": {
+                  "required": true,
+                  "decimals": 0
+                },
+                "validation": {
+                  "minValue": {
+                    "id": "5dd53d0c-1cd9-4fcb-a8b2-232b8b335d87",
+                    "enabled": false,
+                    "validationType": "minValue",
+                    "entityType": "Custom",
+                    "inclusive": true
+                  },
+                  "maxValue": {
+                    "id": "48871ad8-e6ca-4181-a807-e3332832485e",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "inclusive": true,
+                    "custom": 100,
+                    "previousAnswer": null,
+                    "validationType": "maxValue"
+                  }
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "12",
+            "sectionId": "1760a554-060f-4e6a-bf64-970f98d84ac7",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null,
+            "totalValidation": {
+              "id": "d5163844-3898-419e-a21c-e87da7b43157",
+              "enabled": true,
+              "entityType": "Custom",
+              "condition": "Equal",
+              "previousAnswer": null,
+              "custom": 100,
+              "validationType": "total"
+            }
+          },
+          {
+            "id": "438e3a42-0df2-433c-b7a9-b53aded3646a",
+            "pageType": "QuestionPage",
+            "title": "<p>Do you expect <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span>&#x27;s workforce size to change over the <em>next two weeks</em> due to the coronavirus (COVID-19) outbreak? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "1aed00ac-0f6b-4623-a153-6e5405bacada",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "26",
+                "type": "Radio",
+                "questionPageId": "438e3a42-0df2-433c-b7a9-b53aded3646a",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "cd3c8aeb-6c60-4333-8b2d-e0ed80764c62",
+                    "label": "Expect workforce size to increase",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "4f7fb95b-786f-495d-8b70-52c842ae3829",
+                    "label": "Expect workforce size to decrease",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "dee04eac-7df0-4938-a0ca-98812547698d",
+                    "label": "Expect workforce size to stay the same",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "e88acaa6-5181-4867-be47-770e079e4233",
+                    "label": "Not sure",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "40e7aabf-afcc-4b4b-90fd-8b8e61e9add5",
+                    "label": "Not applicable",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": null,
+            "alias": "13",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          }
+        ],
+        "alias": "Operational perform.",
+        "questionnaireId": "935a4614-a465-4b66-8ae4-e052aef82505",
+        "introductionTitle": "<p>Operational performance of your business</p>",
+        "introductionContent": "<p>This section asks you for information on any changes to the size and capacity of your workforce during the last two weeks, and expectations over the next two weeks. </p>"
+      },
+      {
+        "id": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+        "title": "<p>Other financial or operational changes</p>",
+        "introductionEnabled": false,
+        "pages": [
+          {
+            "id": "34493fa3-6f1c-4ce7-a96f-d0e28a3155b1",
+            "pageType": "QuestionPage",
+            "title": "<p>Were there any other changes to financial or operational activities for <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> that were unexpected in the last two weeks? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "14325322-7186-4b76-9606-c7afd7f8e1c0",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "27",
+                "type": "Radio",
+                "questionPageId": "34493fa3-6f1c-4ce7-a96f-d0e28a3155b1",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "4541f60f-3ace-4c19-9471-af137af4aa5d",
+                    "label": "Yes",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "41bdb991-de85-457a-b01f-ce1a67c33fe2",
+                    "label": "No",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "8dbeaaf1-7e20-4043-9bc2-cfeea98bdc9d",
+              "else": {
+                "id": "34c7615f-9c94-4312-b5e1-ccce9b421e97",
+                "logical": "NextPage"
+              },
+              "rules": [
+                {
+                  "id": "114d3519-31ed-4c41-acb1-f997e1b4d1a1",
+                  "destination": {
+                    "id": "1fbd83ac-6461-4b1c-8d3d-a37101a9c226",
+                    "pageId": "1f84642d-9790-4154-ab29-3f8eb2ed0a73"
+                  },
+                  "expressionGroup": {
+                    "id": "edb77c2f-e3d1-49f1-ae1b-7444e08a1232",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "39c757be-e2af-435b-896a-b7a1de7e2538",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "14325322-7186-4b76-9606-c7afd7f8e1c0",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "41bdb991-de85-457a-b01f-ce1a67c33fe2"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "14",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": "Examples of financial and operational activities",
+            "definitionContent": "<ul><li>Investment impacts</li><li>Stock changes</li><li>Widening or changing the range of goods and/or services produced</li></ul>",
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "79020ea1-d551-41a6-a057-3ef500d631c0",
+            "pageType": "QuestionPage",
+            "title": "<p>Please give more details about any other unexpected changes to financial or operational activities</p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "987d09e5-8391-42c4-b5a4-7117b81ae1bb",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "28",
+                "type": "TextArea",
+                "questionPageId": "34493fa3-6f1c-4ce7-a96f-d0e28a3155b1",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "14a",
+            "sectionId": "07aa7033-76e4-41b4-81e4-a957831a5a42",
+            "guidance": null,
+            "definitionLabel": "Examples of financial and operational activities",
+            "definitionContent": "<ul><li>Investment impacts</li><li>Stock changes</li><li>Widening or changing the range of goods and/or services produced</li></ul>",
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "1f84642d-9790-4154-ab29-3f8eb2ed0a73",
+            "pageType": "QuestionPage",
+            "title": "<p>Are you expecting any other financial and/or operational activities at <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> to be affected by the coronavirus (COVID-19) outbreak over the <em>next two weeks</em>?  </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "618464a8-4a5a-4bf8-820a-1e36a41254c9",
+                "description": "",
+                "guidance": "",
+                "label": "",
+                "qCode": "29",
+                "type": "Radio",
+                "questionPageId": "1f84642d-9790-4154-ab29-3f8eb2ed0a73",
+                "properties": {
+                  "required": true
+                },
+                "validation": {
+                  
+                },
+                "options": [
+                  {
+                    "id": "7febc938-69c3-4337-95ff-1ff77185924a",
+                    "label": "Yes, I expect other financial and/or operational activities to be affected",
+                    "description": null,
+                    "additionalAnswer": null
+                  },
+                  {
+                    "id": "4f959e0b-7011-4fbb-ae33-6bd89389f40e",
+                    "label": "No, I do not expect any other financial and/or operational activities to be affected",
+                    "description": null,
+                    "additionalAnswer": null
+                  }
+                ]
+              }
+            ],
+            "routing": {
+              "id": "fcf22435-668b-45c1-accf-24193ed21ae1",
+              "else": {
+                "id": "78f32398-7c03-42dc-a9be-70de31efd87e",
+                "pageId": "a466d34d-19c1-4f04-a1ff-1de73f1c3a77"
+              },
+              "rules": [
+                {
+                  "id": "f510acf0-f8e2-4147-9c21-4ab755f73f44",
+                  "destination": {
+                    "id": "ea177be6-9e11-4000-b3a4-337430e72d94",
+                    "pageId": "182d789c-7500-4a07-b271-d639e2840085"
+                  },
+                  "expressionGroup": {
+                    "id": "b9279ea7-0cb2-49c0-ba51-d16798e64d79",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "befbe9df-18bf-4e3e-9b6b-899f4d61f5bd",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "618464a8-4a5a-4bf8-820a-1e36a41254c9",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "4f959e0b-7011-4fbb-ae33-6bd89389f40e"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "15",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": "Examples of financial and operational activities",
+            "definitionContent": "<ul><li>Investment impacts</li><li>Stock changes</li><li>Widening or changing the range of goods and/or services produced</li></ul>",
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "a466d34d-19c1-4f04-a1ff-1de73f1c3a77",
+            "pageType": "QuestionPage",
+            "title": "<p>Please give more details about what other financial and/or operational activities at <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> you think will be affected in the <em>next two weeks</em></p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "1828d72b-0bca-4934-80f4-fe52b78dd9e7",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "30",
+                "type": "TextArea",
+                "questionPageId": "a466d34d-19c1-4f04-a1ff-1de73f1c3a77",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": {
+              "id": "743e77a2-9915-40da-b9fa-efaed0e1e9da",
+              "else": {
+                "id": "7011bb97-456d-459f-ad57-46f789d80327",
+                "logical": "NextPage"
+              },
+              "rules": [
+                {
+                  "id": "963c192c-1f0e-4f39-ac9c-c777169feb9a",
+                  "destination": {
+                    "id": "af3afc38-f486-40b8-9efe-674a31196cea",
+                    "sectionId": "19187b42-33f0-4bf8-92c3-aa13bc8628f8"
+                  },
+                  "expressionGroup": {
+                    "id": "10da36e6-b497-4770-ade8-b4af864d1afe",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "d7143517-c812-470e-9415-8d8eb1f7eed3",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "618464a8-4a5a-4bf8-820a-1e36a41254c9",
+                          "nullReason": "NoRoutableAnswerOnPage"
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": [
+                            "7febc938-69c3-4337-95ff-1ff77185924a"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "alias": "15a",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": "Examples of financial and operational activities",
+            "definitionContent": "<ul><li>Investment impacts</li><li>Stock changes</li><li>Widening or changing the range of goods and/or services produced</li></ul>",
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          },
+          {
+            "id": "182d789c-7500-4a07-b271-d639e2840085",
+            "pageType": "QuestionPage",
+            "title": "<p>Why do you think <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span> will not have any issues due to coronavirus (COVID-19) over the next two weeks? </p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "f4364e1c-c061-406f-9cb1-e457f87bd760",
+                "description": "",
+                "guidance": "",
+                "label": "Please give details ",
+                "qCode": "31",
+                "type": "TextArea",
+                "questionPageId": "182d789c-7500-4a07-b271-d639e2840085",
+                "properties": {
+                  "required": true,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "16",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          }
+        ],
+        "alias": "Other changes",
+        "questionnaireId": "935a4614-a465-4b66-8ae4-e052aef82505",
+        "introductionTitle": "<p>Other financial or operational changes</p>",
+        "introductionContent": "<p>This section asks for information on any other changes to financial and/or operational activities <em>not already covered</em> in the last two weeks, and expectations over the next two weeks. </p>"
+      },
+      {
+        "id": "19187b42-33f0-4bf8-92c3-aa13bc8628f8",
+        "title": "<p>Comments</p>",
+        "introductionEnabled": false,
+        "pages": [
+          {
+            "id": "840d9b9e-842b-4307-9006-9d93de8466ce",
+            "pageType": "QuestionPage",
+            "title": "<p>Let us know anything else that you think may help us understand the impact of coronavirus (COVID-19) on <span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">[Ru Name]</span></p>",
+            "description": "",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "answers": [
+              {
+                "id": "f2cd92db-8721-45eb-be99-848705657b88",
+                "description": "",
+                "guidance": "",
+                "label": "Comments",
+                "qCode": "146",
+                "type": "TextArea",
+                "questionPageId": "840d9b9e-842b-4307-9006-9d93de8466ce",
+                "properties": {
+                  "required": false,
+                  "maxLength": "2000"
+                },
+                "validation": {
+                  
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "routing": null,
+            "alias": "17",
+            "sectionId": "87fce9eb-d7e7-4893-8188-0ac12c665edf",
+            "guidance": null,
+            "definitionLabel": null,
+            "definitionContent": null,
+            "additionalInfoLabel": null,
+            "additionalInfoContent": null
+          }
+        ],
+        "alias": "",
+        "questionnaireId": "935a4614-a465-4b66-8ae4-e052aef82505",
+        "introductionTitle": null,
+        "introductionContent": null
+      }
+    ],
+    "createdBy": "d6ff59d1-5bd5-41eb-ba29-59e8108c2493",
+    "legalBasis": "Voluntary",
+    "updatedAt": "2020-05-19T11:10:07.470Z",
+    "isPublic": true,
+    "id": "bd8d539d-50ed-4855-8006-f8d4050d69a1",
+    "publishStatus": "Unpublished",
+    "introduction": {
+      "id": "443a751c-a172-4e99-8d13-91272303d765",
+      "title": "<p>You are completing this for <span data-piped=\"metadata\" data-id=\"0b10fa5e-a18e-4c90-85a4-5be64e3612c5\">trad_as</span> (<span data-piped=\"metadata\" data-id=\"33705574-b577-4c1f-a0a3-0ca9b3f7ff7c\">ru_name</span>)</p>",
+      "description": "<ul><li>Your response will help us provide real-time information during the coronavirus (COVID-19) outbreak.</li><li>Information will be used by government to make crucial decisions for the population and the UK economy.</li></ul><p><strong>Thank you for completing this short survey at this challenging time.</strong></p>",
+      "legalBasis": "VOLUNTARY",
+      "secondaryTitle": "<p>Information you need</p>",
+      "secondaryDescription": "<ul><li>Information should relate to the UK.</li><li>You do not need to provide actual data.</li><li>We will treat your information securely and confidentially.</li></ul>",
+      "collapsibles": [
+        {
+          "id": "6e544239-f551-405d-88fa-ebab391b8402",
+          "title": "Section one: Financial performance of your business",
+          "description": "<p>This section asks for information on any changes during the last two weeks, and expectations for the next two weeks, to:</p><ul><li>your business&#x27;s turnover</li><li>your business&#x27;s imports and exports</li><li>the availability and prices of materials, goods and services </li><li>your business&#x27;s financial resources</li></ul>"
+        },
+        {
+          "id": "a3235f11-cfe9-4c4a-b903-626cee3067f0",
+          "title": "Section two: Operational performance of your business",
+          "description": "<p>This section asks for information any changes to the size and capacity of your workforce during the last two weeks and expectations for the next two weeks.</p>"
+        }
+      ],
+      "tertiaryTitle": "",
+      "tertiaryDescription": ""
+    },
+    "editors": [
+      
+    ],
+    "title": "Business Impact of Coronavirus (COVID-19) survey",
+    "type": "Business",
+    "navigation": true
+  }

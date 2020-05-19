@@ -1,7 +1,8 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const fileUpload = require('express-fileupload')
-const processQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
+const processRunnerQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
+const processAuthorQuestionnaire = require(`./middleware/processAuthorQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
 const bodyParser = require("body-parser")
 const { parseQuestionText } = require(`./utils/runner_utils`)
@@ -22,11 +23,19 @@ app.get('/', function (req, res) {
   res.render('index.html', { title: "Extract Question Codes and Titles" })
 })
 
-app.post('/',
+app.post('/runner-upload',
   fileUpload(),
-  processQuestionnaire,
+  processRunnerQuestionnaire,
   (req, res) => {
     res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
+  }
+)
+
+app.post('/author-upload',
+  fileUpload(),
+  processAuthorQuestionnaire,
+  (req, res) => {
+    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 

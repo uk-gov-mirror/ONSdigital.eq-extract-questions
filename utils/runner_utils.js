@@ -3,7 +3,7 @@ const parseQuestionText = (questionText) => {
     .replace(/metadata/g, "")
     .replace(/answers\[/g, "[")
     .replace(/{{/g, "")
-    .replace(/ }}/g, "")
+    .replace(/}}/g, "")
     .replace(/']/g, "]")
     .replace(/\['/g, "[")
     .replace(/&apos;/g, "'")

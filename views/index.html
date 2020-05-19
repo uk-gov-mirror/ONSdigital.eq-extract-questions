@@ -6,7 +6,7 @@
             <div class="grid__col col-6@m">
                 <form method="POST" enctype="multipart/form-data" id="upload-form">
                     <div class="field">
-                        <label class="label venus">Select questionnaire json file: </label>
+                        <label class="label venus">Select runner json file: </label>
                         <input class="input" type="file" name="jsonFile" required />
                     </div>
                 </form>
@@ -15,7 +15,25 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn" form="upload-form">View results</button>
+                <button  type="submit" class="btn" form="upload-form" formaction="/runner-upload">View results</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <form method="POST" enctype="multipart/form-data" id="author-form">
+                    <div class="field">
+                        <label class="label venus">Select author json file: </label>
+                        <input class="input" type="file" name="jsonFile" required />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <button  type="submit" class="btn" form="author-form" formaction="/author-upload">View results</button>
             </div>
         </div>
     </div>
