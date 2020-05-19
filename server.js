@@ -1,7 +1,7 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const fileUpload = require('express-fileupload')
-const processQuestionnaire = require(`./middleware/processQuestionnaire`)
+const processQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
 const bodyParser = require("body-parser")
 const { parseQuestionText } = require(`./utils/runner_utils`)
