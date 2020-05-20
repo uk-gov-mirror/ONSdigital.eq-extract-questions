@@ -9,8 +9,10 @@ const getQuestionnaireFromURL = async (req, res, next) => {
       json: true,
       uri: req.body.url || req.query.url
     }
+    console.log('waiting on fetch')
     const response = await request(options)
     res.locals.questionnaire = response
+    console.log('fetch complete')
     next()
   }
   catch (e) {
