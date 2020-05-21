@@ -11,50 +11,11 @@
                 <th class="table--header--cell">Question Title</th>
                 <th class="table--header--cell">Answers Type</th>
                 <th class="table--header--cell">Answers Label</th>
+                <th class="table--header--cell">Qcode</th>
                 <th class="table--header--cell">Options Label</th>
                 </thead>
                 <tbody>
-                {%for question in questions %}
-                {%for answer in question.answers %}
-                        {% if answer.options %}
-                            {%for option in answer.options %}
-                                <tr class="table--row">
-                                    <td class="table--cell">
-                                        {{ question.alias }}
-                                    </td>
-                                    <td class="table--cell">
-                                        {{ question.title | parseQuestionText | safe  }}
-                                    </td>
-                                    <td class="table--cell">
-                                        {{ answer.type }}
-                                    </td>
-                                    <td class="table--cell">
-                                        {{ answer.label }}
-                                    </td>
-                                    <td class="table--cell">
-                                        {{ option.label }}
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        {% else %}
-                            <tr class="table--row">
-                                <td class="table--cell">
-                                    {{ question.alias }}
-                                </td>
-                                <td class="table--cell">
-                                    {{ question.title  | parseQuestionText | safe }}
-                                </td>
-                                <td class="table--cell">
-                                    {{ answer.type }}
-                                </td>
-                                <td class="table--cell">
-                                    {{ answer.label }}
-                                </td>
-                                <td class="table--cell"></td>
-                            </tr>
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
+                    {% include "question-loop.html" %}
                 </tbody>
             </table>
         </div>

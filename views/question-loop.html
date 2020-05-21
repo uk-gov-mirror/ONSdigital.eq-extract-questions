@@ -1,0 +1,25 @@
+{%for question in questions %}
+    {%for answer in question.answers %}
+        {% if loop.first %}
+            {% if answer.options %}
+                {%for option in answer.options %}
+                    {% if loop.first %}
+                        {% include "row-option-first.html" %}
+                    {% else %}
+                        {% include "row-option.html" %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% include "row-no_option-first.html" %}
+            {% endif %}
+        {% else %}
+            {% if answer.options %}
+                {%for option in answer.options %}
+                    {% include "row-option.html" %}
+                {% endfor %}
+            {% else %}
+                {% include "row-no_option.html" %}
+            {% endif %}                        
+        {% endif %}
+    {% endfor %}
+{% endfor %}
