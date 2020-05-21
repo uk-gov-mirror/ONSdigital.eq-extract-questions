@@ -1,8 +1,10 @@
+require('dotenv').config()
 const express = require('express')
 const nunjucks = require('nunjucks')
 const fileUpload = require('express-fileupload')
 const parseQuestionnaire = require(`./middleware/parseQuestionnaire`)
 const fetchSchema = require(`./middleware/fetchSchema`)
+const setUrl = require(`./middleware/setUrl`)
 const processRunnerQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
 const processAuthorQuestionnaire = require(`./middleware/processAuthorQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
@@ -12,8 +14,8 @@ const { parseQuestionText } = require(`./utils/runner_utils`)
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json({ limit: "10mb" }))
 app.use(express.static('static'))
-const jsonParser = bodyParser.json({ limit: "10mb" })
 
 const env = nunjucks.configure("views", {
   autoescape: true,
@@ -44,11 +46,19 @@ app.post('/runner-json',
 )
 
 app.get('/runner-url',
-  jsonParser,
   fetchSchema,
   processRunnerQuestionnaire,
   (req, res) => {
     res.render("runner-url.html", { title: "Results" })
+  }
+)
+
+app.post('/runner-url',
+  setUrl,
+  fetchSchema,
+  processRunnerQuestionnaire,
+  (req, res) => {
+    res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
@@ -62,7 +72,6 @@ app.post('/author-upload',
 )
 
 app.get('/author-json',
-  jsonParser,
   parseQuestionnaire,
   processAuthorQuestionnaire,
   (req, res) => {
@@ -71,11 +80,19 @@ app.get('/author-json',
 )
 
 app.get('/author-url',
-  jsonParser,
   fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
     res.render("author-url.html", { title: "Results" })
+  }
+)
+
+app.post('/author-url',
+  setUrl,
+  fetchSchema,
+  processAuthorQuestionnaire,
+  (req, res) => {
+    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
