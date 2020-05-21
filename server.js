@@ -48,7 +48,7 @@ app.get('/runner-url',
   fetchSchema,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("runner-url.html", { title: "Results" })
   }
 )
 
@@ -75,7 +75,7 @@ app.get('/author-url',
   fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("author-url.html", { title: "Results" })
   }
 )
 
