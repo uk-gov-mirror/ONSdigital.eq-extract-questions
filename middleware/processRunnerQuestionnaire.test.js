@@ -1,20 +1,16 @@
 const mockInput = require("./mocks/test-json")
-const processQuestionnaire = require("./processQuestionnaire")
+const processRunnerQuestionnaire = require("./processRunnerQuestionnaire")
 
 const mockRequest = () => {
-  const req = {
-    files: {
-      jsonFile: {
-        data: JSON.stringify(mockInput)
-      }
-    }
-  }
+  const req = {}
   return req
 }
 
 const mockResponse = () => {
   const res = {
-    locals: {}
+    locals: {
+      questionnaire: mockInput
+    }
   }
   return res
 }
@@ -29,7 +25,7 @@ describe("testing processQuestionnaire", () => {
   })
 
   it(`should return a json object matching snapshot`, async () => {
-    processQuestionnaire(req, res, next)
+    processRunnerQuestionnaire(req, res, next)
     expect(res.locals.questions).toMatchSnapshot()
   })
 })
