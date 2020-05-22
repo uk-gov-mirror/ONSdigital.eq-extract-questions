@@ -1,7 +1,7 @@
 {%for question in questions %} 
     <div class="panel panel--info">
         <div class="panel__header">
-            <span class="mars">{{ question.title | parseQuestionText | safe  }}</span> 
+            <em class="mars">{{ question.title | parseQuestionText | safe  }}</em> 
         </div>
         <div class="panel__body">
             <div class="summary">
