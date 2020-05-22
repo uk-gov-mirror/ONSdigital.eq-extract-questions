@@ -10,16 +10,21 @@
                         <span class="mars"><em>Shortcode: </em>{{ question.alias }}</span> 
                     </div>
                 {% endif %}
-                <div class="mars"><em>Answers:</em></div>
                 <div>
-                    {%for answer in question.answers %}
-                        {% if answer.type == 'DateRange' %}
-                            {% include "answer-daterange.html" %}
-                        {% else %}
-                            {% include "answer-general.html" %}
-                        {% endif %}
-                    {% endfor %}
+                    <span class="mars"><em>Question type: </em>{{ question.pageType }}{{ question.type }}</span> 
                 </div>
+                {% if question.answers %}
+                    <div class="mars"><em>Answers:</em></div>
+                    <div>
+                        {%for answer in question.answers %}
+                            {% if answer.type == 'DateRange' %}
+                                {% include "answer-daterange.html" %}
+                            {% else %}
+                                {% include "answer-general.html" %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         </div>     
     </div>

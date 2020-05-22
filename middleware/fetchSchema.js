@@ -16,7 +16,7 @@ const getQuestionnaireFromURL = async (req, res, next) => {
     next()
   }
   catch (e) {
-    res.status(500).send(`Sorry, something went wrong with the url request; ${e.message}`)
+    res.status(500).send(`Sorry, something went wrong with the url request`)
   }
 }
 

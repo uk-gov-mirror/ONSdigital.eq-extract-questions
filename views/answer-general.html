@@ -1,14 +1,28 @@
 <div class="summary__item summary__item--multiple">
     <div class="grid ">
-        <div class="grid__col col-12@xs col-12@m">
-            <div class="mars"><em>Answer Label: </em> {{ answer.label }}</div>
-        </div>
-        <div class="grid__col col-12@xs col-12@m">
-            <div class="mars"><em>Q-Code: </em> {{ answer.qCode }}{{ answer.q_code }}</div>
-        </div>
+        {% if answer.label %}
+            <div class="grid__col col-12@xs col-12@m">
+                <div class="mars"><em>Answer Label: </em> {{ answer.label }}</div>
+            </div>
+        {% endif %}
+        {% if answer.qCode or answer.q_code %}
+            <div class="grid__col col-12@xs col-12@m">
+                <div class="mars"><em>Q-Code: </em> {{ answer.qCode }}{{ answer.q_code }}</div>
+            </div>
+        {% endif %}
         <div class="grid__col col-12@xs col-12@m">
             <div class="mars"><em>Type: </em> {{ answer.type }}</div>
         </div>
+        {% if answer.unit or answer.properties.unit %}
+            <div class="grid__col col-12@xs col-12@m">
+                <div class="mars"><em>Unit: </em>{{ answer.unit }}{{ answer.properties.unit }}</div>
+            </div>
+        {% endif %}
+         {% if answer.properties.format %}
+            <div class="grid__col col-12@xs col-12@m">
+                <div class="mars"><em>Format: </em>{{ answer.properties.format }}</div>
+            </div>
+        {% endif %}
         {% if answer.options %}
             <div class="grid__col col-12@xs col-12@m">
                 <div class="mars"><em>Options(Q-Code):</em></div>
