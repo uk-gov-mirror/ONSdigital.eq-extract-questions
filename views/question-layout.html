@@ -1,0 +1,30 @@
+{%for question in questions %}
+    <div class="summary">
+        <div class="panel panel--info">
+
+            <div class="panel__header">
+                <span class="mars"><em>Question:</em></span> 
+                <span class="mars">{{ question.title | parseQuestionText | safe  }}</span> 
+            </div>
+            <div class="panel__body">
+                {% if question.alias %}
+                    <div>
+                        <span class="mars"><em>Shortcode:</em></span> 
+                        <span class="mars">{{ question.alias }}</span> 
+                    </div>
+                {% endif %}
+                <div class="summary__answer mars"><em>Answers</em></div>
+                <div class="summary__block">
+                    {%for answer in question.answers %}
+                        {% if answer.type == 'DateRange' %}
+                            {% include "answer-daterange.html" %}
+                        {% else %}
+                            {% include "answer-general.html" %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>     
+        </div>
+    </div>
+    <br>
+{% endfor %}
