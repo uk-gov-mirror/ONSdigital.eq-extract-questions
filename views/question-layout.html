@@ -3,7 +3,6 @@
         <div class="panel panel--info">
 
             <div class="panel__header">
-                <span class="mars"><em>Question:</em></span> 
                 <span class="mars">{{ question.title | parseQuestionText | safe  }}</span> 
             </div>
             <div class="panel__body">
@@ -13,6 +12,7 @@
                         <span class="mars">{{ question.alias }}</span> 
                     </div>
                 {% endif %}
+                <br>
                 <div class="summary__answer mars"><em>Answers</em></div>
                 <div class="summary__block">
                     {%for answer in question.answers %}
