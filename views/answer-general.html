@@ -1,17 +1,17 @@
 <div class="summary__item">
     <div class="grid">
         <div class="grid__col col-12@xs col-12@m">
-            <div class="summary__question mars"><em>Answer Label:</em> {{ answer.label }}</div>
+            <div class="mars"><em>Answer Label: </em> {{ answer.label }}</div>
         </div>
         <div class="grid__col col-12@xs col-12@m">
-            <div class="summary__question mars"><em>Q-Code:</em> {{ answer.qCode }}{{ answer.q_code }}</div>
+            <div class="mars"><em>Q-Code: </em> {{ answer.qCode }}{{ answer.q_code }}</div>
         </div>
         <div class="grid__col col-12@xs col-12@m">
-            <div class="summary__question mars">T<em>ype:</em> {{ answer.type }}</div>
+            <div class="mars"><em>Type: </em> {{ answer.type }}</div>
         </div>
         {% if answer.options %}
             <div class="grid__col col-12@xs col-12@m">
-                <div class="summary__question mars"><em>Options(Q-Code):</em></div>
+                <div class="mars"><em>Options(Q-Code):</em></div>
             </div>
             <div class="grid__col col-12@xs col-12@m">
             {%for option in answer.options %}

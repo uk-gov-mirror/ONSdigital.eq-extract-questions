@@ -1,19 +1,16 @@
-{%for question in questions %}
-    <div class="summary">
-        <div class="panel panel--info">
-
-            <div class="panel__header">
-                <span class="mars">{{ question.title | parseQuestionText | safe  }}</span> 
-            </div>
-            <div class="panel__body">
+{%for question in questions %} 
+    <div class="panel panel--info">
+        <div class="panel__header">
+            <span class="mars">{{ question.title | parseQuestionText | safe  }}</span> 
+        </div>
+        <div class="panel__body">
+            <div class="summary">
                 {% if question.alias %}
                     <div>
-                        <span class="mars"><em>Shortcode:</em></span> 
-                        <span class="mars">{{ question.alias }}</span> 
+                        <span class="mars"><em>Shortcode: </em>{{ question.alias }}</span> 
                     </div>
                 {% endif %}
-                <br>
-                <div class="summary__answer mars"><em>Answers</em></div>
+                <div class="mars"><em>Answers:</em></div>
                 <div class="summary__block">
                     {%for answer in question.answers %}
                         {% if answer.type == 'DateRange' %}
@@ -23,8 +20,8 @@
                         {% endif %}
                     {% endfor %}
                 </div>
-            </div>     
-        </div>
+            </div>
+        </div>     
     </div>
     <br>
 {% endfor %}
