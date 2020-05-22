@@ -4,7 +4,7 @@
     <div class="container">
         <div class="grid">
             <div class="grid__col col-6@m">
-                <form method="POST" enctype="multipart/form-data" id="upload-form">
+                <form method="POST" action="/runner-upload" enctype="multipart/form-data" id="upload-form">
                     <div class="field">
                         <label class="label venus">Select runner json file: </label>
                         <input class="input" type="file" name="jsonFile" required />
@@ -15,14 +15,14 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn" form="upload-form" formaction="/runner-upload">View results</button>
+                <button  type="submit" class="btn btn--small" form="upload-form" >View results</button>
             </div>
         </div>
         <br>
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <form method="POST" enctype="multipart/form-data" id="author-form">
+                <form method="POST" action="/author-upload" enctype="multipart/form-data" id="author-form">
                     <div class="field">
                         <label class="label venus">Select author json file: </label>
                         <input class="input" type="file" name="jsonFile" required />
@@ -33,14 +33,14 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn" form="author-form" formaction="/author-upload">View results</button>
+                <button  type="submit" class="btn btn--small" form="author-form" >View results</button>
             </div>
         </div>
         <br>
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <form method="POST" enctype="application/x-www-form-urlencoded" id="author-qid-form">
+                <form method="POST" action="/author-url" enctype="application/x-www-form-urlencoded" id="author-qid-form">
                     <div class="field">
                         <label class="label venus">Enter author questionnaire id: </label>
                         <input class="input" type="text" name="author_qid" required />
@@ -51,14 +51,14 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn" form="author-qid-form" formaction="/author-url">View results</button>
+                <button  type="submit" class="btn btn--small" form="author-qid-form" >View results</button>
             </div>
         </div>
         <br>
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <form method="POST" enctype="application/x-www-form-urlencoded" id="runner-qid-form">
+                <form method="POST" action="/runner-url" enctype="application/x-www-form-urlencoded" id="runner-qid-form">
                     <div class="field">
                         <label class="label venus">Enter runner questionnaire id: </label>
                         <input class="input" type="text" name="runner_qid" required />
@@ -69,7 +69,7 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn" form="runner-qid-form" formaction="/runner-url">View results</button>
+                <button  type="submit" class="btn btn--small" form="runner-qid-form">View results</button>
             </div>
         </div>
     </div>
