@@ -14,16 +14,16 @@
                 <div class="mars"><em>Options(Q-Code):</em></div>
             </div>
             <div class="grid__col col-12@xs col-12@m">
-            {%for option in answer.options %}
                 <ul>
+                {%for option in answer.options %}   
                     <li class="mars">{{ option.label }}
                         {% if option.qCode or option.q_code%}
                         ({{ option.qCode }}{{ option.q_code }})
                         {% endif %}
                     </li>
-                </ul>
                 {% endfor %}
-                </div>
+                </ul>
+            </div>
         {% endif %}
     </div>
 </div>
