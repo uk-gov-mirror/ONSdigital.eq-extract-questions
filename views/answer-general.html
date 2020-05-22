@@ -1,8 +1,8 @@
-<div class="summary__item summary__item--multiple">
+<div class="summary__item">
     <div class="grid ">
         {% if answer.label %}
             <div class="grid__col col-12@xs col-12@m">
-                <div class="mars"><em>Answer Label: </em> {{ answer.label }}</div>
+                <div class="mars"><em>Answer label: </em> {{ answer.label }}</div>
             </div>
         {% endif %}
         {% if answer.qCode or answer.q_code %}
@@ -39,5 +39,6 @@
                 </ul>
             </div>
         {% endif %}
+        {% include "additional-info.html" %}
     </div>
 </div>

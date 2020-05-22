@@ -5,14 +5,7 @@
         </div>
         <div class="panel__body">
             <div class="summary">
-                {% if question.alias %}
-                    <div>
-                        <span class="mars"><em>Shortcode: </em>{{ question.alias }}</span> 
-                    </div>
-                {% endif %}
-                <div>
-                    <span class="mars"><em>Question type: </em>{{ question.pageType }}{{ question.type }}</span> 
-                </div>
+                {% include "question.html" %}
                 {% if question.answers %}
                     <div class="mars"><em>Answers:</em></div>
                     <div>

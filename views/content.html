@@ -1,0 +1,10 @@
+{% if content.description %}
+    <div class="mars">{{ content.description | safe  }}</div> 
+{% endif %}    
+{% if content.list %}
+    <ul>
+    {% for item in content.list %}    
+        <li class="mars">{{ item | safe  }}</li> 
+    {% endfor %}
+    </ul>
+{% endif %} 

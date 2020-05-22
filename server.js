@@ -23,6 +23,9 @@ const env = nunjucks.configure("views", {
 })
 
 env.addFilter('parseQuestionText', parseQuestionText)
+env.addFilter('is_string', (obj) => {
+  return typeof obj === 'string'
+})
 
 app.get('/', function (req, res) {
   res.render('index.html', { title: "Extract Question Codes and Titles" })

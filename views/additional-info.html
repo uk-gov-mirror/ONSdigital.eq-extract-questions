@@ -1,0 +1,27 @@
+{% if loop.last %}
+    <div class="grid__col col-12@xs col-12@m">
+        <br>
+    </div>
+    {% if question.additionalInfoLabel %}
+        <div class="grid__col col-12@xs col-12@m">
+            <div class="mars"><em>Additional information label: </em> {{ question.additionalInfoLabel }}</div>
+        </div>
+    {% endif %}
+    {% if question.additionalInfoContent %}
+        <div class="grid__col col-12@xs col-12@m">
+            <div class="mars"><em>Additional information content:</em></div> 
+            <div class="mars">{{ question.additionalInfoContent | safe }}</div>
+        </div>
+    {% endif %}
+    {% if answer.guidance %}
+        <div class="grid__col col-12@xs col-12@m">
+            <div class="mars"><em>Additional information label: </em> {{ answer.guidance.show_guidance }}</div>
+        </div>
+        <div class="grid__col col-12@xs col-12@m">
+            <div class="mars"><em>Additional information content:</em></div> 
+            {% for content in answer.guidance.content %}  
+                {% include "content.html" %}
+            {% endfor %} 
+        </div>
+    {% endif %}
+{% endif %}

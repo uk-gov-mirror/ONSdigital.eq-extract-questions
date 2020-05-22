@@ -1,0 +1,51 @@
+{% if question.alias %}
+    <div class="mars"><em>Shortcode: </em>{{ question.alias }}</div> 
+{% endif %}
+{% if question.pageType %}
+    <div class="mars"><em>Question type: </em>{{ question.pageType }}</div> 
+{% endif %}
+{% if question.type %}
+     <div class="mars"><em>Question type: </em>{{ question.type }}</div> 
+{% endif %}
+{% if (question.description and question.descriptionEnabled === undefined) or question.descriptionEnabled %}
+    <div class="mars"><em>Description: </em>{{ question.description | parseQuestionText | safe  }}</div> 
+{% endif %}
+
+{% if question.definitionEnabled %}
+    <div class="mars"><em>Defintion label: </em>{{ question.definitionLabel  | parseQuestionText | safe }}</div> 
+    <div class="mars"><em>Defintion content: </em></div> 
+    <div class="mars">{{ question.definitionContent  | parseQuestionText | safe }}</div> 
+{% endif %}    
+
+{% if question.definitions %}
+    {% for definition in question.definitions %}
+        <div class="mars"><em>Defintion label: </em>{{ definition.title | safe }}</div> 
+        <div class="mars"><em>Defintion content: </em></div>
+        {% for content in definition.content %}
+            {% include "content.html" %}
+        {% endfor %}
+    {% endfor %}    
+{% endif %}
+
+{% if question.guidance and question.guidance | is_string %}
+    <div class="mars"><em>Guidance: </em></div> 
+    <div class="panel panel--info panel--simple">
+        <div class="panel__body">
+            <div class="mars">{{ question.guidance  | parseQuestionText | safe }}</div> 
+        </div>
+    </div>
+{% endif %}
+
+{% if question.guidance.content %}
+    <div>
+        <div class="mars"><em>Guidance: </em></div> 
+        <div class="panel panel--info panel--simple">
+            <div class="panel__body">
+                {% for content in question.guidance.content %}  
+                    {% include "content.html" %}
+                {% endfor %}
+            </div>
+        </div> 
+    </div>
+{% endif %}
+
