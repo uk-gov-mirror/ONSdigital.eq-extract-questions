@@ -11,7 +11,7 @@
                     </div>
                 {% endif %}
                 <div class="mars"><em>Answers:</em></div>
-                <div class="summary__block">
+                <div>
                     {%for answer in question.answers %}
                         {% if answer.type == 'DateRange' %}
                             {% include "answer-daterange.html" %}
