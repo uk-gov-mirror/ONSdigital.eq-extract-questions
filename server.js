@@ -33,7 +33,7 @@ app.post('/runner-upload',
   parseQuestionnaire,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
@@ -41,7 +41,7 @@ app.post('/runner-json',
   parseQuestionnaire,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
@@ -49,7 +49,7 @@ app.get('/runner-url',
   fetchSchema,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("runner-url.html", { title: "Results" })
+    res.render("url.html", { title: "Results" })
   }
 )
 
@@ -58,7 +58,7 @@ app.post('/runner-url',
   fetchSchema,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("runner-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
@@ -67,7 +67,7 @@ app.post('/author-upload',
   parseQuestionnaire,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
@@ -75,7 +75,7 @@ app.get('/author-json',
   parseQuestionnaire,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
@@ -83,7 +83,7 @@ app.get('/author-url',
   fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("author-url.html", { title: "Results" })
+    res.render("url.html", { title: "Results" })
   }
 )
 
@@ -92,7 +92,7 @@ app.post('/author-url',
   fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("author-output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: "Results" })
   }
 )
 
