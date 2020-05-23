@@ -8,18 +8,19 @@
                 {% include "question.html" %}
                 {% if question.answers %}
                     <div class="u-fs-r-b"><em>Answers:</em></div>
-                    <div>
-                        {%for answer in question.answers %}
-                            {% if answer.type == 'DateRange' %}
-                                {% include "answer-daterange.html" %}
-                            {% else %}
-                                {% include "answer-general.html" %}
-                            {% endif %}
-                        {% endfor %}
-                    </div>
+                    {%for answer in question.answers %}
+                        {% if answer.type == 'DateRange' %}
+                            {% include "answer-daterange.html" %}
+                        {% else %}
+                            {% include "answer-general.html" %}
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
             </div>
         </div>     
     </div>
     <br>
+    {% if question.confirmation %}
+        {% include "question-confirmation.html" %}
+    {% endif %}
 {% endfor %}

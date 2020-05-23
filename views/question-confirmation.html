@@ -1,0 +1,38 @@
+<div class="panel panel--info">
+    <div class="panel__header">
+        <em class="u-fs-r--b">{{ question.confirmation.title | parseQuestionText | safe  }}</em> 
+    </div>
+    <div class="panel__body">
+        <div class="summary">
+            <div>
+                <span class="u-fs-r--b">Question type: </span>
+                <span class="u-fs-r">Confirmation Question</span>
+            </div> 
+            <div class="u-fs-r-b"><em>Answers:</em></div>
+            <div class="summary__item">
+                <div class="grid ">
+                    <div class="grid__col col-12@m">
+                        {% if question.confirmation.qCode %}
+                            <div class="grid__col col-12@m">
+                                <span class="u-fs-r--b">Q-Code: </span>
+                                <span class="u-fs-r">{{ question.confirmation.qCode }}</span>
+                            </div>
+                        {% endif %}
+                        <div class="grid__col col-12@m">
+                            <span class="u-fs-r--b">Type: </span>
+                            <span class="u-fs-r">Radio</span>
+                        </div>
+                        <div class="grid__col col-12@m u-fs-r--b">Options:</div>
+                        <div class="grid__col col-12@m">
+                            <ul class="list__item">
+                                <li class="u-fs-r">{{ question.confirmation.positive.label }}</li>
+                                <li class="u-fs-r">{{ question.confirmation.negative.label }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>     
+</div>
+<br>
