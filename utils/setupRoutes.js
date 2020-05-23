@@ -62,5 +62,4 @@ module.exports = (app) => {
   app.post("/download",
     downloadcsv
   )
-
 }
