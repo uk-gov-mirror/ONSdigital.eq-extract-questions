@@ -46,6 +46,7 @@ app.post('/runner-json',
 )
 
 app.get('/runner-url',
+  setUrl,
   fetchSchema,
   processRunnerQuestionnaire,
   renderPage("url.html")
@@ -65,6 +66,7 @@ app.get('/author-json',
 )
 
 app.get('/author-url',
+  setUrl,
   fetchSchema,
   processAuthorQuestionnaire,
   renderPage("url.html")
