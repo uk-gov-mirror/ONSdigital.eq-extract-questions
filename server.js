@@ -36,7 +36,7 @@ app.post('/runner-upload',
   parseQuestionnaire,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
   }
 )
 
@@ -44,7 +44,7 @@ app.post('/runner-json',
   parseQuestionnaire,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
   }
 )
 
@@ -61,7 +61,7 @@ app.post('/runner-url',
   fetchSchema,
   processRunnerQuestionnaire,
   (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
   }
 )
 
@@ -69,7 +69,7 @@ app.get('/author-json',
   parseQuestionnaire,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
   }
 )
 
@@ -77,7 +77,7 @@ app.get('/author-url',
   fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("url.html", { title: "Results" })
+    res.render("url.html", { title: res.locals.questionnaire.title })
   }
 )
 
@@ -86,7 +86,7 @@ app.post('/author-url',
   fetchSchema,
   processAuthorQuestionnaire,
   (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: "Results" })
+    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
   }
 )
 
