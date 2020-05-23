@@ -9,6 +9,7 @@ const setUrl = require(`./middleware/setUrl`)
 const processRunnerQuestionnaire = require(`./middleware/processRunnerQuestionnaire`)
 const processAuthorQuestionnaire = require(`./middleware/processAuthorQuestionnaire`)
 const downloadcsv = require(`./middleware/downloadcsv`)
+const renderPage = require(`./middleware/renderPage`)
 const { parseQuestionText } = require(`./utils/runner_utils`)
 
 const app = express()
@@ -28,66 +29,52 @@ env.addFilter('is_string', (obj) => {
 })
 
 app.get('/', function (req, res) {
-  res.render('index.html', { title: "Extract Question Codes and Titles" })
+  res.render('index.html', { title: "Questionnaire Extract Tool" })
 })
 
 app.post('/runner-upload',
   fileUpload(),
   parseQuestionnaire,
   processRunnerQuestionnaire,
-  (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
-  }
+  renderPage("output.html")
 )
 
 app.post('/runner-json',
   parseQuestionnaire,
   processRunnerQuestionnaire,
-  (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
-  }
+  renderPage("output.html")
 )
 
 app.get('/runner-url',
   fetchSchema,
   processRunnerQuestionnaire,
-  (req, res) => {
-    res.render("url.html", { title: "Results" })
-  }
+  renderPage("url.html")
 )
 
 app.post('/runner-url',
   setUrl,
   fetchSchema,
   processRunnerQuestionnaire,
-  (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
-  }
+  renderPage("output.html")
 )
 
 app.get('/author-json',
   parseQuestionnaire,
   processAuthorQuestionnaire,
-  (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
-  }
+  renderPage("output.html")
 )
 
 app.get('/author-url',
   fetchSchema,
   processAuthorQuestionnaire,
-  (req, res) => {
-    res.render("url.html", { title: res.locals.questionnaire.title })
-  }
+  renderPage("url.html")
 )
 
 app.post('/author-url',
   setUrl,
   fetchSchema,
   processAuthorQuestionnaire,
-  (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: res.locals.questionnaire.title })
-  }
+  renderPage("output.html")
 )
 
 app.post("/download",
