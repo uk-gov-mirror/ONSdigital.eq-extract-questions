@@ -1,13 +1,13 @@
 {%for question in questions %} 
     <div class="panel panel--info">
         <div class="panel__header">
-            <em class="mars">{{ question.title | parseQuestionText | safe  }}</em> 
+            <em class="u-fs-r--b">{{ question.title | parseQuestionText | safe  }}</em> 
         </div>
         <div class="panel__body">
             <div class="summary">
                 {% include "question.html" %}
                 {% if question.answers %}
-                    <div class="mars"><em>Answers:</em></div>
+                    <div class="u-fs-r-b"><em>Answers:</em></div>
                     <div>
                         {%for answer in question.answers %}
                             {% if answer.type == 'DateRange' %}

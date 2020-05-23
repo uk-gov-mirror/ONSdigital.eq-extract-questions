@@ -1,26 +1,44 @@
 {% if question.alias %}
-    <div class="mars"><em>Shortcode: </em>{{ question.alias }}</div> 
+    <div>
+        <span class="u-fs-r--b">Shortcode: </span>
+        <span class="u-fs-r">{{ question.alias }}</span>
+    </div> 
 {% endif %}
 {% if question.pageType %}
-    <div class="mars"><em>Question type: </em>{{ question.pageType }}</div> 
+    <div>
+        <span class="u-fs-r--b">Question type: </span>
+        <span class="u-fs-r">{{ question.pageType }}</span>
+    </div> 
 {% endif %}
 {% if question.type %}
-     <div class="mars"><em>Question type: </em>{{ question.type }}</div> 
+    <div>
+        <span class="u-fs-r--b">Question type: </span>
+        <span class="u-fs-r">{{ question.type }}</span>
+    </div> 
 {% endif %}
 {% if (question.description and question.descriptionEnabled === undefined) or question.descriptionEnabled %}
-    <div class="mars"><em>Description: </em>{{ question.description | parseQuestionText | safe  }}</div> 
+    <div>
+        <span class="u-fs-r--b">Description: </span>
+        <span class="u-fs-r">{{ question.description | parseQuestionText | safe  }}</span>
+    </div> 
 {% endif %}
 
 {% if question.definitionEnabled %}
-    <div class="mars"><em>Defintion label: </em>{{ question.definitionLabel  | parseQuestionText | safe }}</div> 
-    <div class="mars"><em>Defintion content: </em></div> 
-    <div class="mars">{{ question.definitionContent  | parseQuestionText | safe }}</div> 
+    <div>
+        <span class="u-fs-r--b">Defintion label: </span>
+        <span class="u-fs-r">{{ question.definitionLabel  | parseQuestionText | safe }}</span>
+    </div> 
+    <div class="u-fs-r--b">Defintion content: </div> 
+    <div class="u-fs-r">{{ question.definitionContent  | parseQuestionText | safe }}</div> 
 {% endif %}    
 
 {% if question.definitions %}
     {% for definition in question.definitions %}
-        <div class="mars"><em>Defintion label: </em>{{ definition.title | safe }}</div> 
-        <div class="mars"><em>Defintion content: </em></div>
+        <div>
+            <span class="u-fs-r--b">Defintion label: </span>
+            <span class="u-fs-r">{{ definition.title | safe }}</span>
+        </div> 
+        <div class="u-fs-r--b">Defintion content: </div>
         {% for content in definition.content %}
             {% include "content.html" %}
         {% endfor %}
@@ -28,10 +46,10 @@
 {% endif %}
 
 {% if question.guidance and question.guidance | is_string %}
-    <div class="mars"><em>Guidance: </em></div> 
+    <div class="u-fs-r--b">Guidance: </div> 
     <div class="panel panel--info panel--simple">
         <div class="panel__body">
-            <div class="mars">{{ question.guidance  | parseQuestionText | safe }}</div> 
+            <div class="u-fs-r">{{ question.guidance  | parseQuestionText | safe }}</div> 
         </div>
     </div>
     <br>
@@ -39,7 +57,7 @@
 
 {% if question.guidance.content %}
     <div>
-        <div class="mars"><em>Guidance: </em></div> 
+        <div class="u-fs-r--b">Guidance: </div> 
         <div class="panel panel--info panel--simple">
             <div class="panel__body">
                 {% for content in question.guidance.content %}  

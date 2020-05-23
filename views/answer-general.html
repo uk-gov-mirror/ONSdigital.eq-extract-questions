@@ -1,42 +1,53 @@
 <div class="summary__item">
     <div class="grid ">
         {% if answer.label %}
-            <div class="grid__col col-12@xs col-12@m">
-                <div class="mars"><em>Answer label: </em> {{ answer.label }}</div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Answer label: </span>
+                <span class="u-fs-r">{{ answer.label }}</span>
             </div>
         {% endif %}
         {% if answer.qCode or answer.q_code %}
-            <div class="grid__col col-12@xs col-12@m">
-                <div class="mars"><em>Q-Code: </em> {{ answer.qCode }}{{ answer.q_code }}</div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Q-Code: </span>
+                <span class="u-fs-r">{{ answer.qCode }}{{ answer.q_code }}</span>
             </div>
         {% endif %}
-        <div class="grid__col col-12@xs col-12@m">
-            <div class="mars"><em>Type: </em> {{ answer.type }}</div>
+        <div class="grid__col col-12@m">
+            <span class="u-fs-r--b">Type: </span>
+            <span class="u-fs-r">{{ answer.type }}</span>
         </div>
         {% if answer.unit or answer.properties.unit %}
-            <div class="grid__col col-12@xs col-12@m">
-                <div class="mars"><em>Unit: </em>{{ answer.unit }}{{ answer.properties.unit }}</div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Unit: </span>
+                <span class="u-fs-r">{{ answer.unit }}{{ answer.properties.unit }}</span>
             </div>
         {% endif %}
          {% if answer.properties.format %}
-            <div class="grid__col col-12@xs col-12@m">
-                <div class="mars"><em>Format: </em>{{ answer.properties.format }}</div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Format: </span>
+                <span class="u-fs-r">{{ answer.properties.format }}</span>
             </div>
         {% endif %}
         {% if answer.options %}
-            <div class="grid__col col-12@xs col-12@m">
-                <div class="mars"><em>Options(Q-Code):</em></div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Options(Q-Code):</span>
             </div>
-            <div class="grid__col col-12@xs col-12@m">
+            <div class="grid__col col-12@m">
                 <ul>
-                {%for option in answer.options %}   
-                    <li class="mars">{{ option.label }}
-                        {% if option.qCode or option.q_code%}
-                        ({{ option.qCode }}{{ option.q_code }})
-                        {% endif %}
-                    </li>
+                {%for option in answer.options %} 
+                    {% if not option.mutuallyExclusive %} 
+                        {% include "option.html" %}
+                    {% endif %}
                 {% endfor %}
                 </ul>
+                {%for option in answer.options %} 
+                    {% if option.mutuallyExclusive %} 
+                        <div><em>Mutually exclusive option:</em></div>
+                        <ul>
+                        {% include "option.html" %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
             </div>
         {% endif %}
         {% include "additional-info.html" %}
