@@ -65,15 +65,6 @@ app.post('/runner-url',
   }
 )
 
-app.post('/author-upload',
-  fileUpload(),
-  parseQuestionnaire,
-  processAuthorQuestionnaire,
-  (req, res) => {
-    res.render("output.html", { questions: res.locals.questions, title: "Results" })
-  }
-)
-
 app.get('/author-json',
   parseQuestionnaire,
   processAuthorQuestionnaire,

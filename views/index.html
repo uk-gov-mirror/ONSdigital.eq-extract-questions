@@ -38,7 +38,7 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <form method="POST" action="/runner-upload" enctype="multipart/form-data" id="upload-form">
+                <form method="POST" action="/runner-upload" enctype="multipart/form-data" id="runner-form">
                     <div class="field">
                         <label class="label venus">Select runner json file: </label>
                         <input class="input" type="file" name="jsonFile" required />
@@ -49,24 +49,7 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn btn--small" form="upload-form" >View results</button>
-            </div>
-        </div>
-        <br>
-        <div class="grid">
-            <div class="grid__col col-6@m">
-                <form method="POST" action="/author-upload" enctype="multipart/form-data" id="author-form">
-                    <div class="field">
-                        <label class="label venus">Select author json file: </label>
-                        <input class="input" type="file" name="jsonFile" required />
-                    </div>
-                </form>
-            </div>
-        </div>
-        <br>
-        <div class="grid">
-            <div class="grid__col col-6@m">
-                <button  type="submit" class="btn btn--small" form="author-form" >View results</button>
+                <button  type="submit" class="btn btn--small" form="runner-form" >View results</button>
             </div>
         </div>
     </div>
