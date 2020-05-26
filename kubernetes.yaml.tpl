@@ -33,6 +33,17 @@ spec:
         image: eu.gcr.io/GOOGLE_CLOUD_PROJECT/eq-extract-questions:COMMIT_SHA
         ports:
         - containerPort: 3000
+        env:
+          - name: AUTHOR_SCHEMA_URL
+            valueFrom:
+              secretKeyRef:
+                name: extract-questions-secrets
+                key: AUTHOR_SCHEMA_URL
+          - name: RUNNER_SCHEMA_URL
+            valueFrom:
+              secretKeyRef:
+                name: extract-questions-secrets
+                key: RUNNER_SCHEMA_URL
 ---
 kind: Service
 apiVersion: v1

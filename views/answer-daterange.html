@@ -1,0 +1,39 @@
+<div class="summary__item summary__item--multiple">
+    <div class="grid">
+        <div class="grid__col col-12@m">
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Answer Label: </span>
+                <span class="u-fs-r">{{ answer.label }}</span>
+            </div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Q-Code: </span>
+                <span class="u-fs-r">{{ answer.qCode }}{{ answer.q_code }}</span>
+            </div>
+            <div class="grid__col col-12@m">
+                <span class="u-fs-r--b">Type: </span>
+                <span class="u-fs-r">{{ answer.type }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% if answer.secondaryLabel %}
+    <div class="summary__item summary__item--multiple">
+        <div class="grid">
+            <div class="grid__col col-12@m">
+                <div class="grid__col col-12@m">
+                    <span class="u-fs-r--b">Answer Label: </span>
+                    <span class="u-fs-r">{{ answer.secondaryLabel }}</span>
+                </div>
+                <div class="grid__col col-12@m">
+                    <span class="u-fs-r--b">Q-Code: </span>
+                    <span class="u-fs-r">{{ answer.secondaryQCode }}</span>
+                </div>
+                <div class="grid__col col-12@m">
+                    <span class="u-fs-r--b">Type: </span>
+                    <span class="u-fs-r">{{ answer.type }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% include "additional-info.html" %}

@@ -1,0 +1,29 @@
+{% if loop.last and (question.additionalInfoLabel or answer.guidance) %}
+    <div class="grid__col col-12@m">
+        <br>
+    </div>
+    {% if question.additionalInfoLabel %}
+        <div class="grid__col col-12@m">
+            <span class="u-fs-r--b">Additional information label: </span>
+            <span class="u-fs-r">{{ question.additionalInfoLabel }}</span>
+        </div>
+    {% endif %}
+    {% if question.additionalInfoContent %}
+        <div class="grid__col col-12@m">
+            <div class="u-fs-r--b"><em>Additional information content:</em></div> 
+            <div class="u-fs-r">{{ question.additionalInfoContent | safe }}</div>
+        </div>
+    {% endif %}
+    {% if answer.guidance %}
+        <div class="grid__col col-12@m">
+            <span class="u-fs-r--b">Additional information label: </span>
+            <span class="u-fs-r">{{ answer.guidance.show_guidance }}</span>
+        </div>
+        <div class="grid__col col-12@m">
+            <div class="u-fs-r--b">Additional information content:</div> 
+            {% for content in answer.guidance.content %}  
+                {% include "content.html" %}
+            {% endfor %} 
+        </div>
+    {% endif %}
+{% endif %}

@@ -4,9 +4,43 @@
     <div class="container">
         <div class="grid">
             <div class="grid__col col-6@m">
-                <form method="POST" enctype="multipart/form-data" id="upload-form">
+                <form method="POST" action="/author-url" enctype="application/x-www-form-urlencoded" id="author-qid-form">
                     <div class="field">
-                        <label class="label venus">Select questionnaire json file: </label>
+                        <label class="label u-fs-r--b">Enter author questionnaire id: </label>
+                        <input class="input" type="text" name="author_qid" required />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <button  type="submit" class="btn btn--small" form="author-qid-form" >View results</button>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <form method="POST" action="/runner-url" enctype="application/x-www-form-urlencoded" id="runner-qid-form">
+                    <div class="field">
+                        <label class="label u-fs-r--b">Enter runner questionnaire id: </label>
+                        <input class="input" type="text" name="runner_qid" required />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <button  type="submit" class="btn btn--small" form="runner-qid-form">View results</button>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="grid__col col-6@m">
+                <form method="POST" action="/runner-upload" enctype="multipart/form-data" id="runner-form">
+                    <div class="field">
+                        <label class="label u-fs-r--b">Select runner json file: </label>
                         <input class="input" type="file" name="jsonFile" required />
                     </div>
                 </form>
@@ -15,7 +49,7 @@
         <br>
         <div class="grid">
             <div class="grid__col col-6@m">
-                <button  type="submit" class="btn" form="upload-form">View results</button>
+                <button  type="submit" class="btn btn--small" form="runner-form" >View results</button>
             </div>
         </div>
     </div>
