@@ -29,7 +29,7 @@ router.post('/table',
 router.get('/json',
   parseQuestionnaire,
   processAuthorQuestionnaire,
-  renderPage("output.html")
+  renderPage("output-grid.html")
 )
 
 module.exports = router
