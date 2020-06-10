@@ -31,7 +31,7 @@ router.post('/upload',
   fileUpload(),
   parseQuestionnaire,
   processRunnerQuestionnaire,
-  renderPage("output.html")
+  renderPage("output-grid.html")
 )
 
 router.post('/upload-table',
@@ -44,7 +44,7 @@ router.post('/upload-table',
 router.post('/json',
   parseQuestionnaire,
   processRunnerQuestionnaire,
-  renderPage("output.html")
+  renderPage("output-grid.html")
 )
 
 module.exports = router
