@@ -32,8 +32,7 @@ const transforms = [unwind({ paths: ["answers", "answers.options"], blankOut: tr
 module.exports = (req, res) => {
   const data = parse(JSON.parse(req.body.questions), { fields, transforms })
   res.attachment("questions.csv")
-  //res.send(data)
-
+  
   const parsedText = data
     .replace(/(<([^>]+)>)/gi, "")
     .replace("&#x27;", "'")
