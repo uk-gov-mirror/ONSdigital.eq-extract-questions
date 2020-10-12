@@ -15,7 +15,7 @@ const fields = [
   },
   {
     label: "Answer label",
-    value: (row) => row.answers.label
+    value: (row) => (row.answers.secondaryLabel ? row.answers.label + ' / ' + row.answers.secondaryLabel : row.answers.label )
   },
   {
     label: "QCode / Answer code",
@@ -23,16 +23,16 @@ const fields = [
   },
   {
     label: "Transformation information",
-    value: (row) => row.answers.label
+    value: (row) => (row.answers.options ? row.answers.options.label : '' )
   }
 ]
 
-const transforms = [unwind({ paths: ["answers", "answers.options"] })]
+const transforms = [unwind({ paths: ["answers", "answers.options"], blankOut: true })]
 
 module.exports = (req, res) => {
   const data = parse(JSON.parse(req.body.questions), { fields, transforms })
   res.attachment("questions.csv")
-  // res.send(data)
+  //res.send(data)
 
   const parsedText = data
     .replace(/(<([^>]+)>)/gi, "")
