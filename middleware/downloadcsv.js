@@ -15,7 +15,7 @@ const fields = [
   },
   {
     label: "Answer label",
-    value: (row) => (row.answers.secondaryLabel ? row.answers.label + ' / ' + row.answers.secondaryLabel : row.answers.label )
+    value: (row) => (row.answers.secondaryLabel ? `${row.answers.label} / ${row.answers.secondaryLabel }` : row.answers.label )
   },
   {
     label: "QCode / Answer code",
