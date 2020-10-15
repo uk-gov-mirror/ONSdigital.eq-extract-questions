@@ -33,11 +33,11 @@ const fields = [
     value: (row) => row.answers.secondaryLabel ? `${row.answers.label} / ${row.answers.secondaryLabel}` : row.answers.label
   },
   {
-    label: "QCode / Answer code",
+    label: "QCode",
     value: (row) => get_qcode(row)
   },
   {
-    label: "Transformation information",
+    label: "Options label",
     value: (row) => row.answers.options ? row.answers.options.label : ''
   }
 ]
