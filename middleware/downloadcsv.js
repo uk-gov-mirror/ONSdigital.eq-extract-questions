@@ -1,5 +1,20 @@
 const { parse, transforms: { unwind } } = require("json2csv")
 
+const get_qcode = (row) => {
+  if (row.answers.options && row.answers.options.q_code) {
+    return row.answers.options.q_code
+  }
+  if (row.answers.options && row.answers.options.qCode) {
+    return row.answers.options.qCode
+  }
+  if (row.answers.q_code) {
+    return row.answers.q_code
+  }
+  if (row.answers.qCode) {
+    return row.answers.qCode
+  }
+}
+
 const fields = [
   {
     label: "Author short code",
@@ -15,15 +30,15 @@ const fields = [
   },
   {
     label: "Answer label",
-    value: (row) => (row.answers.secondaryLabel ? `${row.answers.label} / ${row.answers.secondaryLabel }` : row.answers.label )
+    value: (row) => row.answers.secondaryLabel ? `${row.answers.label} / ${row.answers.secondaryLabel}` : row.answers.label
   },
   {
     label: "QCode / Answer code",
-    value: (row) => row.answers.qCode
+    value: (row) => get_qcode(row)
   },
   {
     label: "Transformation information",
-    value: (row) => (row.answers.options ? row.answers.options.label : '' )
+    value: (row) => row.answers.options ? row.answers.options.label : ''
   }
 ]
 
@@ -32,11 +47,9 @@ const transforms = [unwind({ paths: ["answers", "answers.options"], blankOut: tr
 module.exports = (req, res) => {
   const data = parse(JSON.parse(req.body.questions), { fields, transforms })
   res.attachment("questions.csv")
-  
+
   const parsedText = data
     .replace(/(<([^>]+)>)/gi, "")
     .replace("&#x27;", "'")
   res.send(parsedText)
-
-
 }
