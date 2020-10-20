@@ -50,6 +50,6 @@ module.exports = (req, res) => {
 
   const parsedText = data
     .replace(/(<([^>]+)>)/gi, "")
-    .replace("&#x27;", "'")
+    .replace(/&#x27;/gi, "'")
   res.send(parsedText)
 }
