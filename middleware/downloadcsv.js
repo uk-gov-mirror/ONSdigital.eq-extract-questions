@@ -38,11 +38,11 @@ const fields = [
   },
   {
     label: "Options label",
-    value: (row) => row.answers.options ? row.answers.options.map(options => options.label).join(' / ') : ''
+    value: (row) => row.answers.options ? row.answers.options.label : ""
   }
 ]
 
-const transforms = [unwind({ paths: ["answers"], blankOut: true })]
+const transforms = [unwind({ paths: ["answers", "answers.options"], blankOut: true })]
 
 module.exports = (req, res) => {
   const data = parse(JSON.parse(req.body.questions), { fields, transforms })
