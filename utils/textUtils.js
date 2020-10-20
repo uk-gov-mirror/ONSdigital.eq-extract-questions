@@ -1,4 +1,7 @@
 const parseQuestionText = (questionText) => {
+  if (!questionText) {
+    return questionText
+  }
   const parsedText = questionText
     .replace(/metadata/g, "")
     .replace(/answers\[/g, "[")

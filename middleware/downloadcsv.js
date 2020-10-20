@@ -1,4 +1,5 @@
 const { parse, transforms: { unwind } } = require("json2csv")
+const { parseQuestionText } = require("../utils/textUtils")
 
 const get_qcode = (row) => {
   if (row.answers.options && row.answers.options.q_code) {
@@ -22,7 +23,7 @@ const fields = [
   },
   {
     label: "Question",
-    value: (row) => row.title
+    value: (row) => parseQuestionText(row.title)
   },
   {
     label: "Type",
