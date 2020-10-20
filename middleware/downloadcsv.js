@@ -8,7 +8,7 @@ const get_qcode = (row) => {
     return row.answers.options.qCode
   }
   if (row.answers.q_code) {
-    return row.answers.secondaryQCode ? `${row.answers.q_code} / ${row.answers.secondaryQCode}` : row.answers.q_code
+    return row.answers.q_code
   }
   if (row.answers.qCode) {
     return row.answers.secondaryQCode ? `${row.answers.qCode} / ${row.answers.secondaryQCode}` : row.answers.qCode
