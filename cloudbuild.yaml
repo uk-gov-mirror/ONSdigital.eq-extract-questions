@@ -38,7 +38,7 @@ steps:
       - |
         if [ $_ENV = "staging" ]; then
           gcloud run deploy eq-extract-questions \
-          --image "eu.gcr.io/ons-eqbs-images/eq-publisher:$SHORT_SHA" \
+          --image "eu.gcr.io/ons-eqbs-images/eq-extract-questions:$SHORT_SHA" \
           --region europe-west2 \
           --platform managed
         else
