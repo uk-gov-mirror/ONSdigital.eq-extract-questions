@@ -11,5 +11,6 @@ const getAllQuestions = (questionnaire) => {
 }
 module.exports = (req, res, next) => {
   res.locals.questions = getAllQuestions(res.locals.questionnaire)
+  res.locals.questionSource = "runner"
   next()
 }

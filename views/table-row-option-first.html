@@ -1,8 +1,8 @@
 <tr class="table--row">	
-    {% if question.alias %}	
+    {% if source === "author" %}
         <td class="table--cell">	
-            {{ question.alias }}	
-        </td>	
+            {{ question.alias }}
+        </td>		
     {% endif %}	
     <td class="table--cell">	
         {{ question.title | parseQuestionText | safe  }}	

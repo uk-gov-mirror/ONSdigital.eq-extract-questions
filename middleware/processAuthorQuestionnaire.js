@@ -10,5 +10,6 @@ const getAllPages = (questionnaire) => {
 
 module.exports = (req, res, next) => {
   res.locals.questions = getAllPages(res.locals.questionnaire)
+  res.locals.questionSource = "author"
   next()
 }

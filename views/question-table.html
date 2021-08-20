@@ -2,7 +2,7 @@
     {% if loop.first %}	
     <table class="table">	
         <thead class="table--head">	
-        {% if question.alias %}	
+        {% if source === "author" %}	
             <th class="table--header--cell">Shortcode</th>	
         {% endif %}	
         <th class="table--header--cell">Question Title</th>	
