@@ -4,40 +4,8 @@
         <div class="grid ">
             <div class="grid__col col-12@m">
             {%for rule in question.routing.rules %}
-                {%for expression in rule.expressionGroup.expressions %}
-                    <div class="grid__col col-12@m">
-                        {% if loop.first %}
-                            <span class="u-fs-r--b">If </span>
-                        {% else %}
-                            <span class="u-fs-r--b">or if </span>
-                        {% endif %}
-                        {% if expression.left.answerId %}
-                            <span class="u-fs-r"><a href="#{{ expression.left.answerId }}">Answer</a></span>
-                        {% endif %}
-                        <span class="u-fs-r--b"> {{ expression.condition }}</span>
-                        {% if expression.right.customValue.number %}
-                            <span class="u-fs-r"> {{ expression.right.customValue.number  }}</span>
-                        {% endif %}
-                    </div>
-                    {% if expression.right.optionIds %}
-                        {%for option in expression.right.optionIds %}
-                            <div class="grid__col col-12@m">
-                                <ul>
-                                    {% if optionLabels[option] %}
-                                    <li class="list__item">
-                                        <span class="u-fs-r">{{ optionLabels[option] }}</span>
-                                    </li>
-                                    {% else %}
-                                    <li class="list__item">
-                                        <span class="u-fs-r">Not found</span>
-                                    </li>
-                                    {% endif %}
-                                </ul>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                    
-                {% endfor %}
+                {% set expressionGroup = rule.expressionGroup %} 
+                {% include "expressionGroup.html" %} 
                 <div class="grid__col col-12@m">
                     <span class="u-fs-r--b">Goto </span>
                     {% if rule.destination.logical %}
