@@ -1,5 +1,5 @@
 module.exports = (page) => {
   return (req, res, next) => {
-    res.render(page, { questions: res.locals.questions, title: res.locals.questionnaire.title })
+    res.render(page, { questions: res.locals.questions, title: res.locals.questionnaire.title, source: res.locals.questionSource })
   }
 }

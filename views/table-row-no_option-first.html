@@ -1,20 +1,26 @@
 <tr class="table--row">	
-    {% if question.alias %}	
+    {% if source === "author" %}
         <td class="table--cell">	
-            {{ question.alias }}	
-        </td>	
+            {{ question.alias }}
+        </td>		
     {% endif %}	
     <td class="table--cell">	
         {{ question.title | parseQuestionText | safe  }}	
     </td>	
      <td class="table--cell">	
-        {{ answer.qCode }}{{ answer.q_code }}	
+        {{ answer.qCode }}{{ answer.q_code }}
+        {% if answer.secondaryQCode %}	
+            / {{ answer.secondaryQCode }}
+        {% endif %}	
     </td>	
     <td class="table--cell">	
         {{ answer.type }}	
     </td>	
     <td class="table--cell">	
         {{ answer.label }}	
+        {% if answer.secondaryLabel %}	
+            / {{ answer.secondaryLabel }}
+        {% endif %}
     </td>	
     <td class="table--cell">	
     </td>	
