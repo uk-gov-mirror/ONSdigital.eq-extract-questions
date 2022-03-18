@@ -1,0 +1,26 @@
+<div id={{ question.id }} class="panel panel--info">
+    <div class="panel__header">
+        <em class="u-fs-r--b">{{ question.title | parseQuestionText | safe  }}</em> 
+    </div>
+    <div class="panel__body">
+        <div class="summary">
+            {% include "question-fields.html" %}
+            {% if question.answers %}
+                <div class="u-fs-r-b"><em>Answers:</em></div>
+                {%for answer in question.answers %}
+                    {% if answer.type == 'DateRange' %}
+                        {% include "answer-daterange.html" %}
+                    {% else %}
+                        {% include "answer-general.html" %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% include "routing.html" %}
+        </div>
+    </div>     
+</div>
+<br>
+{% if question.confirmation %}
+    {% include "question-confirmation.html" %}
+{% endif %}
+

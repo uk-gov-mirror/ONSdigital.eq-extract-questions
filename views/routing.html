@@ -1,0 +1,74 @@
+{% if (source === "author") and (question.routing)  %}
+    <div class="u-fs-r-b"><em>Routing:</em></div>
+    <div class="summary__item">
+        <div class="grid ">
+            <div class="grid__col col-12@m">
+            {%for rule in question.routing.rules %}
+                {%for expression in rule.expressionGroup.expressions %}
+                    <div class="grid__col col-12@m">
+                        {% if loop.first %}
+                            <span class="u-fs-r--b">If </span>
+                        {% else %}
+                            <span class="u-fs-r--b">or if </span>
+                        {% endif %}
+                        {% if expression.left.answerId %}
+                            <span class="u-fs-r"><a href="#{{ expression.left.answerId }}">Answer</a></span>
+                        {% endif %}
+                        <span class="u-fs-r--b"> {{ expression.condition }}</span>
+                        {% if expression.right.customValue.number %}
+                            <span class="u-fs-r"> {{ expression.right.customValue.number  }}</span>
+                        {% endif %}
+                    </div>
+                    {% if expression.right.optionIds %}
+                        {%for option in expression.right.optionIds %}
+                            <div class="grid__col col-12@m">
+                                <ul>
+                                    {% if optionLabels[option] %}
+                                    <li class="list__item">
+                                        <span class="u-fs-r">{{ optionLabels[option] }}</span>
+                                    </li>
+                                    {% else %}
+                                    <li class="list__item">
+                                        <span class="u-fs-r">Not found</span>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                {% endfor %}
+                <div class="grid__col col-12@m">
+                    <span class="u-fs-r--b">Goto </span>
+                    {% if rule.destination.logical %}
+                        <span class="u-fs-r">{{ rule.destination.logical }}</span>
+                    {% endif %}
+                    {% if rule.destination.sectionId %}
+                        <span class="u-fs-r">
+                            <a href="#{{ rule.destination.sectionId }}">{{ sectionTitles[rule.destination.sectionId] | parseQuestionText | safe}}</a> 
+                        </span>
+                        <span class="u-fs-r--b">section</span>
+                    {% endif %}
+                    {% if rule.destination.pageId %}
+                        <span class="u-fs-r">
+                            <a href="#{{ rule.destination.pageId }}">{{ questionTitles[rule.destination.pageId] | parseQuestionText | safe}}</a> 
+                        </span>
+                        <span class="u-fs-r--b">page</span>
+                    {% endif %}
+                </div>
+                <hr>
+            {% endfor %}
+            {% if question.routing.else %}
+                <div class="grid__col col-12@m">
+                    <span class="u-fs-r--b">Else goto </span>
+                    {% if question.routing.else.logical %}
+                        <span class="u-fs-r">{{ question.routing.else.logical }}</span>
+                    {% endif %}
+                </div> 
+            {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+
