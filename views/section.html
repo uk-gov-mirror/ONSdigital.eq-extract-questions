@@ -1,0 +1,27 @@
+{%for section in sections %} 
+    <div id={{ section.id }} class="panel panel--success">
+        <div class="panel__header panel">
+            <em class="u-fs-r--b">Section - {{ section.title | parseQuestionText | safe  }}</em> 
+        </div>
+        <div class="panel__body">
+            <div class="summary">
+                <div class="u-fs-r-b">
+                    <em>Introduction Title: </em> 
+                    {{ section.introductionTitle | parseQuestionText | safe }} 
+                </div>
+            </div>
+            <div class="summary">
+                <div class="u-fs-r-b">
+                    <em>Introduction content: </em>
+                    {{ section.introductionContent | parseQuestionText | safe }} 
+                </div>
+            </div>
+        </div>     
+    </div>
+    <br>
+    {%for folder in section.folders %} 
+        {%for question in folder.pages %} 
+            {% include "question.html" %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
