@@ -1,6 +1,5 @@
 module.exports = (page) => {
   return (req, res, next) => {
-    console.log(res.locals.questionnaire.sections)
     res.render(page, {
       questions: res.locals.questions,
       title: res.locals.questionnaire.title,
