@@ -13,10 +13,10 @@ router.route('/url')
     processAuthorQuestionnaire
   )
   .get(
-    renderPage("output-grid-no-buttons.html")
+    renderPage("questionnaire-no-buttons.html")
   )
   .post(
-    renderPage("output-grid.html")
+    renderPage("questionnaire.html")
   )
 
 router.post('/table',
@@ -29,7 +29,7 @@ router.post('/table',
 router.get('/json',
   parseQuestionnaire,
   processAuthorQuestionnaire,
-  renderPage("output-grid.html")
+  renderPage("questionnaire.html")
 )
 
 module.exports = router
