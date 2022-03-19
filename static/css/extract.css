@@ -5,10 +5,9 @@ ul {
     margin-bottom: 0px;
 }
 
-.panel-section__header {
-    background-color: indigo;
-}
-
-.panel-section__body {
-    background-color:darkgrey
-}
+@media print {
+    .panel__header {
+      color: #000;
+      border: 1px solid;
+    }
+ }
