@@ -2,12 +2,14 @@
 
 {% block body %}
 
-<div class="container">
-    <div class="grid">
-        <div class="grid__col col-12@m">
-            {%for section in sections %} 
-                {% include "section.html" %}
-            {% endfor %}
+<div class="ons-page__container ons-container">
+    <div class="ons-grid">
+        <div class="ons-grid__col ons-col-8@">
+            <main id="main-content" class="ons-page__main">
+                {%for section in sections %} 
+                    {% include "section.html" %}
+                {% endfor %}
+            </main>
         </div>
     </div>
 </div>

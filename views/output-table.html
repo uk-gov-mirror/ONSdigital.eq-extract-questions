@@ -2,22 +2,31 @@
 
 {% block body %}
 
-<div class="container">
-    <form id="results-form" method="POST" action="/download">
-        <input type="hidden" value="{{ questions | dump }}" name="questions" />
-    </form>
-    <div class="grid">
-        <div class="grid__col col-12@m">
-            <div class="btn-group">
-                <a href="/"><button class="btn btn-group__btn btn--small" >New questionnaire</button></a>
-                <button class="btn btn-group__btn btn--small" type="submit" form="results-form">Download csv</button>
+<div class="ons-page__container ons-container">
+    <div class="ons-grid">
+        <div class="ons-grid__col ons-col-8@">
+            <main id="main-content" class="ons-page__main">
+            <form id="results-form" method="POST" action="/download">
+                <input type="hidden" value="{{ questions | dump }}" name="questions" />
+            </form>
+            <div class="grid">
+                <div class="grid__col col-12@m">
+                    <div class="btn-group">
+                        <a href="/" class="ons-btn" >
+                            <span class="ons-btn__inner">New questionnaire</span>
+                        </a>
+                        <button class="ons-btn" type="submit" form="results-form">
+                            <span class="ons-btn__inner">Download csv</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <br>
-    <div class="grid">
-        <div class="grid__col col-12@m">
-            {% include "question-table.html" %}
+            <br>
+            <div class="grid">
+                <div class="grid__col col-12@m">
+                    {% include "question-table.html" %}
+                </div>
+            </div>
         </div>
     </div>
 </div>

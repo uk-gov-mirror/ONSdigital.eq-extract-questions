@@ -1,57 +1,53 @@
-<div id={{ answer.id }} class="summary__item">
-    <div class="grid ">
-        <div class="grid__col col-12@m">
-            {% if answer.label %}
-                <div class="grid__col col-12@m">
-                    <span class="u-fs-r--b">Answer label: </span>
-                    <span class="u-fs-r">{{ answer.label }}</span>
-                </div>
-            {% endif %}
-            {% if answer.qCode or answer.q_code %}
-                <div class="grid__col col-12@m">
-                    <span class="u-fs-r--b">Q-Code: </span>
-                    <span class="u-fs-r">{{ answer.qCode }}{{ answer.q_code }}</span>
-                </div>
-            {% endif %}
-            <div class="grid__col col-12@m">
-                <span class="u-fs-r--b">Type: </span>
-                <span class="u-fs-r">{{ answer.type }}</span>
-            </div>
-            {% if answer.unit or answer.properties.unit %}
-                <div class="grid__col col-12@m">
-                    <span class="u-fs-r--b">Unit: </span>
-                    <span class="u-fs-r">{{ answer.unit }}{{ answer.properties.unit }}</span>
-                </div>
-            {% endif %}
-            {% if answer.properties.format %}
-                <div class="grid__col col-12@m">
-                    <span class="u-fs-r--b">Format: </span>
-                    <span class="u-fs-r">{{ answer.properties.format }}</span>
-                </div>
-            {% endif %}
-            {% if answer.options %}
-                <div class="grid__col col-12@m">
-                    <span class="u-fs-r--b">Answer options (Q-Code):</span>
-                </div>
-                <div class="grid__col col-12@m">
-                    <ul>
-                    {%for option in answer.options %} 
-                        {% if not option.mutuallyExclusive %} 
-                            {% include "option.html" %}
-                        {% endif %}
-                    {% endfor %}
-                    </ul>
-                    {%for option in answer.options %} 
-                        {% if option.mutuallyExclusive %} 
-                            <div><em>Mutually exclusive option:</em></div>
-                            <ul>
-                            {% include "option.html" %}
-                            </ul>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            {% endif %}
-            {% include "additional-info.html" %}
+<div id={{ answer.id }}>
+    {% if answer.label %}
+        <div>
+            <span class="ons-u-fs-r--b">Answer label: </span>
+            {{ answer.label }}
         </div>
+    {% endif %}
+    {% if answer.qCode or answer.q_code %}
+        <div>
+            <span class="ons-u-fs-r--b">Q-Code: </span>
+            {{ answer.qCode }}{{ answer.q_code }}
+        </div>
+    {% endif %}
+    <div>
+        <span class="ons-u-fs-r--b">Type: </span>
+        {{ answer.type }}
     </div>
+    {% if answer.unit or answer.properties.unit %}
+        <div>
+            <span class="ons-u-fs-r--b">Unit: </span>
+            {{ answer.unit }}{{ answer.properties.unit }}
+        </div>
+    {% endif %}
+    {% if answer.properties.format %}
+        <div>
+            <span class="ons-u-fs-r--b">Format: </span>
+            {{ answer.properties.format }}
+        </div>
+    {% endif %}
+    {% if answer.options %}
+        <div>
+            <span class="ons-u-fs-r--b">Answer options (Q-Code):</span>
+        </div>
+        <div>
+            <ul>
+            {%for option in answer.options %} 
+                {% if not option.mutuallyExclusive %} 
+                    {% include "option.html" %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+            {%for option in answer.options %} 
+                {% if option.mutuallyExclusive %} 
+                    <div class="ons-u-fs-r--b">Mutually exclusive option:</div>
+                    <ul>
+                    {% include "option.html" %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% include "additional-info.html" %}
 </div>

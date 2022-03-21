@@ -5,9 +5,16 @@ ul {
     margin-bottom: 0px;
 }
 
+.item-detail {
+    padding-left: 1rem;
+}
+
 @media print {
-    .panel__header {
+    .ons-panel__header {
       color: #000;
       border: 1px solid;
+    }
+    .ons-btn {
+        display: none;
     }
  }
