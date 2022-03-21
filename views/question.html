@@ -5,22 +5,27 @@
     <div class="ons-panel__body">
         {% include "question-fields.html" %}
         {% if question.answers %}
-            <div class="ons-u-fs-r--b">Answers:</div>
-            {%for answer in question.answers %}
-                {% if answer.type == 'DateRange' %}
-                    {% include "answer-daterange.html" %}
-                {% else %}
-                    {% include "answer-general.html" %}
-                {% endif %}
-            {% endfor %}
+            <div class="ons-u-fs-r--b ons-summary__item">Answers:</div>
+            <div class="item-detail">
+                {%for answer in question.answers %}
+                    {% if answer.type == 'DateRange' %}
+                        {% include "answer-daterange.html" %}
+                    {% else %}
+                        {% include "answer-general.html" %}
+                    {% endif %}
+                {% endfor %}
+            </div>
         {% endif %}
         {% include "routing.html" %}
         {% if (question.skipConditions) or (folder.skipConditions) %}
-            <div class="ons-u-fs-r--b">Skip this question:</div>
-            {% set skipConditions = question.skipConditions %}
-            {% include "skip.html" %}
-            {% set skipConditions = folder.skipConditions %}
-            {% include "skip.html" %}
+            <br>
+            <div class="item-detail">
+            <div class="ons-u-fs-r--b ons-summary__item">Skip this question:</div>
+                {% set skipConditions = question.skipConditions %}
+                {% include "skip.html" %}
+                {% set skipConditions = folder.skipConditions %}
+                {% include "skip.html" %}
+            </div>
         {% endif %}
     </div>     
 </div>

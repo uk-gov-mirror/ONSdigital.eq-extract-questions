@@ -1,8 +1,5 @@
 {% if (source === "author") and (skipConditions) %}
     {% for expressionGroup in skipConditions %}
         {% include "expressionGroup.html" %} 
-        {% if not loop.last %}
-            <hr>
-        {% endif %}
     {% endfor %}
 {% endif %}

@@ -5,6 +5,10 @@ ul {
     margin-bottom: 0px;
 }
 
+.item-detail {
+    padding-left: 1rem;
+}
+
 @media print {
     .panel__header {
       color: #000;

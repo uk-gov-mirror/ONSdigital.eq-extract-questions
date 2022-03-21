@@ -1,31 +1,42 @@
 {% if (source === "author") and (question.routing)  %}
-    <div class="ons-u-fs-r--b">Routing:</div>
-    {%for rule in question.routing.rules %}
-        {% set expressionGroup = rule.expressionGroup %} 
-        {% include "expressionGroup.html" %} 
-        <div>
-            <span class="ons-u-fs-r--b">Goto </span>
-            {% if rule.destination.logical %}
-                {{ rule.destination.logical }}
-            {% endif %}
-            {% if rule.destination.sectionId %}
-                <a href="#{{ rule.destination.sectionId }}">{{ sectionTitles[rule.destination.sectionId] | parseQuestionText | safe}}</a> 
-                <span class="ons-u-fs-r--b">section</span>
-            {% endif %}
-            {% if rule.destination.pageId %}
-                <a href="#{{ rule.destination.pageId }}">{{ questionTitles[rule.destination.pageId] | parseQuestionText | safe}}</a> 
-                <span class="ons-u-fs-r--b">page</span>
-            {% endif %}
-        </div>
-    {% endfor %}
-    {% if question.routing.else %}
-        <div>
-            <span class="ons-u-fs-r--b">Else goto </span>
-            {% if question.routing.else.logical %}
-                {{ question.routing.else.logical }}
-            {% endif %}
-        </div> 
-    {% endif %}
+    <br>
+    <div class="ons-u-fs-r--b ons-summary__item">Routing:</div>
+    <div class="item-detail">
+        {%for rule in question.routing.rules %}
+            {% set expressionGroup = rule.expressionGroup %} 
+            {% include "expressionGroup.html" %} 
+            <div>
+                <span class="ons-u-fs-r--b">Goto </span>
+                {% if rule.destination.logical %}
+                    {{ rule.destination.logical }}
+                {% endif %}
+                {% if rule.destination.sectionId %}
+                    <a href="#{{ rule.destination.sectionId }}">{{ sectionTitles[rule.destination.sectionId] | parseQuestionText | safe}}</a> 
+                    <span class="ons-u-fs-r--b">section</span>
+                {% endif %}
+                {% if rule.destination.pageId %}
+                    <a href="#{{ rule.destination.pageId }}">{{ questionTitles[rule.destination.pageId] | parseQuestionText | safe}}</a> 
+                    <span class="ons-u-fs-r--b">page</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+        {% if question.routing.else %}
+            <div>
+                <span class="ons-u-fs-r--b">Else goto </span>
+                {% if question.routing.else.logical %}
+                    {{ question.routing.else.logical }}
+                {% endif %}
+                {% if question.routing.else.sectionId %}
+                    <a href="#{{ rule.destination.sectionId }}">{{ sectionTitles[question.routing.else.sectionId] | parseQuestionText | safe}}</a> 
+                    <span class="ons-u-fs-r--b">section</span>
+                {% endif %}
+                {% if question.routing.else.pageId %}
+                    <a href="#{{ rule.destination.pageId }}">{{ questionTitles[question.routing.else.pageId] | parseQuestionText | safe}}</a> 
+                    <span class="ons-u-fs-r--b">page</span>
+                {% endif %}
+            </div> 
+        {% endif %}
+    </div>
 {% endif %}
 
 
