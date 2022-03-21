@@ -1,0 +1,5 @@
+{% if (source === "author") and (expressionGroups) %}
+    {% for expressionGroup in expressionGroups %}
+        {% include "expressionGroup.html" %} 
+    {% endfor %}
+{% endif %}

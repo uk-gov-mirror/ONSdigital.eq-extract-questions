@@ -21,10 +21,10 @@
             <br>
             <div class="ons-u-fs-r--b ons-summary__item">Skip this question:</div>
             <div class="item-detail">
-                {% set skipConditions = question.skipConditions %}
-                {% include "skip.html" %}
-                {% set skipConditions = folder.skipConditions %}
-                {% include "skip.html" %}
+                {% set expressionGroups = question.skipConditions %}
+                {% include "expressionGroups.html" %}
+                {% set expressionGroups = folder.skipConditions %}
+                {% include "expressionGroups.html" %}
             </div>
         {% endif %}
     </div>     

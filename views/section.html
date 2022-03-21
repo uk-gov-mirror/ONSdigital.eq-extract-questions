@@ -11,6 +11,14 @@
             <span class="ons-u-fs-r--b">Introduction content: </span>
             {{ section.introductionContent | parseQuestionText | safe }} 
         </div>
+        {% if section.displayConditions %}
+            <br>
+            <div class="ons-u-fs-r--b ons-summary__item">Display this section:</div>
+            <div class="item-detail">
+                {% set expressionGroups = section.displayConditions %}
+                {% include "expressionGroups.html" %}
+            </div>
+        {% endif %}
     </div>     
 </div>
 <br>

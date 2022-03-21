@@ -24,8 +24,8 @@
             </div>
         {% if (question.confirmation.skipConditions) %}
             <div class="ons-u-fs-r-b">Skip this question:</div>
-            {% set skipConditions = question.confirmation.skipConditions %}
-            {% include "skip.html" %}
+            {% set expressionGroups = question.confirmation.skipConditions %}
+            {% include "expressionGroups.html" %}
         {% endif %}
     </div>     
 </div>
