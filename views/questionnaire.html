@@ -3,20 +3,19 @@
 {% block body %}
 
 <div class="container">
-    <form id="results-form" method="POST" action="/download">
-        <input type="hidden" value="{{ questions | dump }}" name="questions" />
-    </form>
     <div class="grid">
         <div class="grid__col col-12@m">
             <div class="btn-group">
-                <a href="/"><button class="btn btn-group__btn btn--small" >New questionnaire</button></a>
+                <a href="/"><button class="btn btn-group__btn btn--small print__hidden" >New questionnaire</button></a>
             </div>
         </div>
     </div>
     <br>
     <div class="grid">
         <div class="grid__col col-12@m">
-            {% include "section.html" %}
+            {%for section in sections %} 
+                {% include "section.html" %}
+            {% endfor %}
         </div>
     </div>
 </div>

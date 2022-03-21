@@ -16,6 +16,13 @@
                 {% endfor %}
             {% endif %}
             {% include "routing.html" %}
+            {% if (question.skipConditions) or (folder.skipConditions) %}
+                <div class="u-fs-r-b"><em>Skip this question:</em></div>
+                {% set skipConditions = question.skipConditions %}
+                {% include "skip.html" %}
+                {% set skipConditions = folder.skipConditions %}
+                {% include "skip.html" %}
+            {% endif %}
         </div>
     </div>     
 </div>
