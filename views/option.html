@@ -1,19 +1,26 @@
 <li class="list__item">
     <div>
-        <span class="u-fs-r">
-            {{ option.label }}
-            {% if option.qCode or option.q_code %}
-                ({{ option.qCode }}{{ option.q_code }})
-            {% endif %}
-        </span>
+        {{ option.label }}
+        {% if option.qCode or option.q_code %}
+            ({{ option.qCode }}{{ option.q_code }})
+        {% endif %}
     </div>
     {% if option.description %}
-        <div class="u-fs-s"><em>Description: </em>{{ option.description }}</div>
+        <div class="ons-u-fs-s">
+            <span class="ons-u-fs-s--b">Description: </span>
+            {{ option.description }}
+        </div>
     {% endif %}
     {% if option.additionalAnswer.label %}
-        <div class="u-fs-s"><em>Other label: </em>{{ option.additionalAnswer.label }}</div>
+        <div class="ons-u-fs-s">
+            <span class="ons-u-fs-s--b">Other label: </span>
+            {{ option.additionalAnswer.label }}
+        </div>
     {% endif %}
     {% if option.detail_answer.label %}
-        <div class="u-fs-s"><em>Other label: </em>{{ option.detail_answer.label }}</div>
+        <div class="ons-u-fs-s">
+            <span class="ons-u-fs-s--b">Other label: </span>
+            {{ option.detail_answer.label }}
+        </div>
     {% endif %}
 </li>

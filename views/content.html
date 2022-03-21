@@ -1,8 +1,8 @@
 {% if content.description %}
-    <div class="u-fs-r">{{ content.description | safe  }}</div> 
+    <div>{{ content.description | safe  }}</div> 
 {% endif %}    
 {% if content.list %}
-    <ul class="u-fs-r">
+    <ul>
     {% for item in content.list %}    
         <li class="list__item">{{ item | safe  }}</li> 
     {% endfor %}

@@ -1,37 +1,33 @@
 {%for expression in expressionGroup.expressions %}
-    <div class="grid__col col-12@m">
-        {% if loop.first %}
-            <span class="u-fs-r--b">If </span>
+    {% if loop.first %}
+        <span class="ons-u-fs-r--b">If </span>
+    {% else %}
+        {% if (expressionGroup.operator === "And") %}
+            <span class="ons-u-fs-r--b">and if </span>
         {% else %}
-            {% if (expressionGroup.operator === "And") %}
-                <span class="u-fs-r--b">and if </span>
-            {% else %}
-                <span class="u-fs-r--b">or if </span>
-            {% endif %}
+            <span class="ons-u-fs-r--b">or if </span>
         {% endif %}
-        {% if expression.left.answerId %}
-            <span class="u-fs-r"><a href="#{{ expression.left.answerId }}">Answer</a></span>
-        {% endif %}
-        <span class="u-fs-r--b"> {{ expression.condition }}</span>
-        {% if expression.right.customValue %}
-            <span class="u-fs-r">{{ expression.right.customValue.number }}</span>
-        {% endif %}
-    </div>
+    {% endif %}
+    {% if expression.left.answerId %}
+        <a href="#{{ expression.left.answerId }}">Answer</a>
+    {% endif %}
+    <span class="ons-u-fs-r--b"> {{ expression.condition }}</span>
+    {% if expression.right.customValue %}
+        {{ expression.right.customValue.number }}
+    {% endif %}
     {% if expression.right.optionIds %}
         {%for option in expression.right.optionIds %}
-            <div class="grid__col col-12@m">
-                <ul>
-                    {% if optionLabels[option] %}
-                    <li class="list__item">
-                        <span class="u-fs-r">{{ optionLabels[option] }}</span>
-                    </li>
-                    {% else %}
-                    <li class="list__item">
-                        <span class="u-fs-r">Not found</span>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
+            <ul>
+                {% if optionLabels[option] %}
+                <li class="list__item">
+                    {{ optionLabels[option] }}
+                </li>
+                {% else %}
+                <li class="list__item">
+                    Not found
+                </li>
+                {% endif %}
+            </ul>
         {% endfor %}
     {% endif %}
 {% endfor %}

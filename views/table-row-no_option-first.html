@@ -1,27 +1,27 @@
-<tr class="table--row">	
+<tr class="ons-table__row">	
     {% if source === "author" %}
-        <td class="table--cell">	
+        <td class="ons-table__cell">	
             {{ question.alias }}
         </td>		
     {% endif %}	
-    <td class="table--cell">	
+    <td class="ons-table__cell">	
         {{ question.title | parseQuestionText | safe  }}	
     </td>	
-     <td class="table--cell">	
+     <td class="ons-table__cell">	
         {{ answer.qCode }}{{ answer.q_code }}
         {% if answer.secondaryQCode %}	
             / {{ answer.secondaryQCode }}
         {% endif %}	
     </td>	
-    <td class="table--cell">	
+    <td class="ons-table__cell">	
         {{ answer.type }}	
     </td>	
-    <td class="table--cell">	
+    <td class="ons-table__cell">	
         {{ answer.label }}	
         {% if answer.secondaryLabel %}	
             / {{ answer.secondaryLabel }}
         {% endif %}
     </td>	
-    <td class="table--cell">	
+    <td class="ons-table__cell">	
     </td>	
 </tr> 

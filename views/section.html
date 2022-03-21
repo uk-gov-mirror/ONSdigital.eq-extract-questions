@@ -1,19 +1,15 @@
-<div id={{ section.id }} class="panel panel--success">
-    <div class="panel__header panel">
-        <em class="u-fs-r--b">Section - {{ section.title | parseQuestionText | safe  }}</em> 
+<div id={{ section.id }} class="ons-panel ons-panel--success">
+    <div class="ons-panel__header">
+        <h2 class="ons-panel__title ons-u-fs-r--b">Section - {{ section.title | parseQuestionText | safe  }}</h2>
     </div>
-    <div class="panel__body">
-        <div class="summary">
-            <div class="u-fs-r-b">
-                <em>Introduction Title: </em> 
-                {{ section.introductionTitle | parseQuestionText | safe }} 
-            </div>
+    <div class="ons-panel__body">
+        <div>
+            <span class="ons-u-fs-r--b">Introduction Title: </span>
+            {{ section.introductionTitle | parseQuestionText | safe }} 
         </div>
-        <div class="summary">
-            <div class="u-fs-r-b">
-                <em>Introduction content: </em>
-                {{ section.introductionContent | parseQuestionText | safe }} 
-            </div>
+        <div>
+            <span class="ons-u-fs-r--b">Introduction content: </span>
+            {{ section.introductionContent | parseQuestionText | safe }} 
         </div>
     </div>     
 </div>

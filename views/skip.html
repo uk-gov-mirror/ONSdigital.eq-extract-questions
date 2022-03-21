@@ -1,14 +1,8 @@
 {% if (source === "author") and (skipConditions) %}
-    <div class="summary__item">
-        <div class="grid ">
-            <div class="grid__col col-12@m">
-            {% for expressionGroup in skipConditions %}
-                {% include "expressionGroup.html" %} 
-                {% if not loop.last %}
-                    <hr>
-                {% endif %}
-            {% endfor %}
-            </div>
-        </div>
-    </div>
+    {% for expressionGroup in skipConditions %}
+        {% include "expressionGroup.html" %} 
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+    {% endfor %}
 {% endif %}

@@ -1,17 +1,17 @@
 {%for question in questions %}	
     {% if loop.first %}	
-    <table class="table">	
-        <thead class="table--head">	
+    <table class="ons-table">	
+        <thead class="ons-table__head">	
         {% if source === "author" %}	
-            <th class="table--header--cell">Shortcode</th>	
+            <th class="ons-table__header">Shortcode</th>	
         {% endif %}	
-        <th class="table--header--cell">Question Title</th>	
-        <th class="table--header--cell">Qcode</th>	
-        <th class="table--header--cell">Answers Type</th>	
-        <th class="table--header--cell">Answers Label</th>	
-        <th class="table--header--cell">Options Label</th>	
+        <th class="ons-table__header">Question Title</th>	
+        <th class="ons-table__header">Qcode</th>	
+        <th class="ons-table__header">Answers Type</th>	
+        <th class="ons-table__header">Answers Label</th>	
+        <th class="ons-table__header">Options Label</th>	
         </thead>	
-        <tbody>	
+        <tbody class="ons-table__body">	
     {% endif %}	
     {%for answer in question.answers %}	
         {% if loop.first %}	

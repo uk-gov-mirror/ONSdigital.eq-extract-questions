@@ -1,29 +1,27 @@
-<div id={{ question.id }} class="panel panel--info">
-    <div class="panel__header">
-        <em class="u-fs-r--b">{{ question.title | parseQuestionText | safe  }}</em> 
+<div id={{ question.id }} class="ons-panel ons-panel--info">
+    <div class="ons-panel__header">
+        <h2 class="ons-panel__title ons-u-fs-r--b">{{ question.title | parseQuestionText | safe  }}</h2>
     </div>
-    <div class="panel__body">
-        <div class="summary">
-            {% include "question-fields.html" %}
-            {% if question.answers %}
-                <div class="u-fs-r-b"><em>Answers:</em></div>
-                {%for answer in question.answers %}
-                    {% if answer.type == 'DateRange' %}
-                        {% include "answer-daterange.html" %}
-                    {% else %}
-                        {% include "answer-general.html" %}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-            {% include "routing.html" %}
-            {% if (question.skipConditions) or (folder.skipConditions) %}
-                <div class="u-fs-r-b"><em>Skip this question:</em></div>
-                {% set skipConditions = question.skipConditions %}
-                {% include "skip.html" %}
-                {% set skipConditions = folder.skipConditions %}
-                {% include "skip.html" %}
-            {% endif %}
-        </div>
+    <div class="ons-panel__body">
+        {% include "question-fields.html" %}
+        {% if question.answers %}
+            <div class="ons-u-fs-r--b">Answers:</div>
+            {%for answer in question.answers %}
+                {% if answer.type == 'DateRange' %}
+                    {% include "answer-daterange.html" %}
+                {% else %}
+                    {% include "answer-general.html" %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% include "routing.html" %}
+        {% if (question.skipConditions) or (folder.skipConditions) %}
+            <div class="ons-u-fs-r--b">Skip this question:</div>
+            {% set skipConditions = question.skipConditions %}
+            {% include "skip.html" %}
+            {% set skipConditions = folder.skipConditions %}
+            {% include "skip.html" %}
+        {% endif %}
     </div>     
 </div>
 <br>
