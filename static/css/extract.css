@@ -9,6 +9,10 @@ ul {
     padding-left: 1rem;
 }
 
+.ons-panel__title.ons-u-fs-r--b>em {
+        color: #000;
+}
+
 @media print {
     .ons-panel__header {
       color: #000;
