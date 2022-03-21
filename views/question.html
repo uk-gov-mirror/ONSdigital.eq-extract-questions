@@ -19,8 +19,8 @@
         {% include "routing.html" %}
         {% if (question.skipConditions) or (folder.skipConditions) %}
             <br>
-            <div class="item-detail">
             <div class="ons-u-fs-r--b ons-summary__item">Skip this question:</div>
+            <div class="item-detail">
                 {% set skipConditions = question.skipConditions %}
                 {% include "skip.html" %}
                 {% set skipConditions = folder.skipConditions %}
