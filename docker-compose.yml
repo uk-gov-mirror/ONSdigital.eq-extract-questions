@@ -6,8 +6,12 @@ services:
     volumes:
       - .:/app
     ports:
-      - 3050:3000
+      - 3050:3050
+    environment:
+      - AUTHOR_SCHEMA_URL=http://host.docker.internal:4000/export/
     entrypoint:
       - yarn
       - start_dev
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 

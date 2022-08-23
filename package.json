@@ -6,6 +6,7 @@
   "scripts": {
     "start_service": "node server.js",
     "start_dev": "nodemon server.js",
+    "debug": "nodemon --inspect server.js",
     "lint": "eslint .",
     "test": "./scripts/test.sh"
   },
