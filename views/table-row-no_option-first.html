@@ -1,9 +1,7 @@
 <tr class="ons-table__row">	
-    {% if source === "author" %}
-        <td class="ons-table__cell">	
-            {{ question.alias }}
-        </td>		
-    {% endif %}	
+    <td class="ons-table__cell">	
+        {{ question.alias }}
+    </td>		
     <td class="ons-table__cell">	
         {{ question.title | parseQuestionText | safe  }}	
     </td>	

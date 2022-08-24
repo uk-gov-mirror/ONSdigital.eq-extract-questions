@@ -8,15 +8,15 @@
                     <form method="POST" enctype="application/x-www-form-urlencoded" id="author-qid-form">
                         <div class="ons-field">
                             <label class="ons-label" for="text">Enter author questionnaire id: </label>
-                            <input class="ons-input ons-input--text ons-input-type__input" type="text" name="author_qid" required />
+                            <input class="ons-input ons-input--text ons-input-type__input" type="text" name="qid" required />
                         </div>
                     </form>
                     <br>
-                    <button  type="submit" class="ons-btn" form="author-qid-form" formaction="/author/url">
-                        <span class="ons-btn__inner">View questionnaire</span>
+                    <button type="submit" class="ons-btn" form="author-qid-form" formaction="/preview">
+                        <span class="ons-btn__inner">Preview questionnaire</span>
                     </button>
-                    <button  type="submit" class="ons-btn" form="author-qid-form" formaction="/author/table">
-                        <span class="ons-btn__inner">Question table</span>
+                    <button type="submit" class="ons-btn" form="author-qid-form" formaction="/table">
+                        <span class="ons-btn__inner">Table view</span>
                     </button>
                 </main>
             </div>

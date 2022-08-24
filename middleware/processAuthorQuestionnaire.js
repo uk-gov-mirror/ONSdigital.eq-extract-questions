@@ -38,7 +38,6 @@ const getAllQuestionTitles = (questionnaire) => {
 
 module.exports = (req, res, next) => {
   res.locals.questions = getAllPages(res.locals.questionnaire)
-  res.locals.questionSource = "author"
   res.locals.optionLabels = getAllOptionLabels(res.locals.questionnaire)
   res.locals.sectionTitles = getAllSectionTitles(res.locals.questionnaire)
   res.locals.questionTitles = getAllQuestionTitles(res.locals.questionnaire)

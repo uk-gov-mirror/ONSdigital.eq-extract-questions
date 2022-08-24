@@ -12,19 +12,22 @@
             <div class="grid">
                 <div class="grid__col col-12@m">
                     <div class="btn-group">
-                        <a href="/" class="ons-btn" >
-                            <span class="ons-btn__inner">New questionnaire</span>
+                        <a href="/preview?qid={{ qid }}" class="ons-btn print__hidden" >
+                            <span class="ons-btn__inner">Preview</span>
                         </a>
                         <button class="ons-btn" type="submit" form="results-form">
                             <span class="ons-btn__inner">Download csv</span>
                         </button>
+                        <a href="/" class="ons-btn" >
+                            <span class="ons-btn__inner">Enter questionnaire ID</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <br>
+            <hr>
             <div class="grid">
                 <div class="grid__col col-12@m">
-                    {% include "question-table.html" %}
+                    {% include "table-question.html" %}
                 </div>
             </div>
         </div>
