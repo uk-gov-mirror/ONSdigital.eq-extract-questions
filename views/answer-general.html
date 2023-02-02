@@ -2,7 +2,7 @@
     {% if answer.label %}
         <div>
             <span class="ons-u-fs-r--b">Answer label: </span>
-            {{ answer.label }}
+            {{ answer.label | parseQuestionText | safe }}
         </div>
     {% endif %}
     {% if answer.qCode or answer.q_code %}
