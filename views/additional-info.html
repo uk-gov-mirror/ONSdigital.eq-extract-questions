@@ -1,4 +1,4 @@
-{% if loop.last and (question.additionalInfoLabel or answer.guidance) %}
+{% if loop.last and question.additionalInfoEnabled %}
     <div>
         <br>
     </div>
@@ -12,18 +12,6 @@
         <div >
             <div class="ons-u-fs-r--b"><em>Additional information content:</em></div> 
             {{ question.additionalInfoContent | safe }}
-        </div>
-    {% endif %}
-    {% if answer.guidance %}
-        <div>
-            <span class="ons-u-fs-r--b">Additional information label: </span>
-            {{ answer.guidance.show_guidance }}
-        </div>
-        <div>
-            <div class="ons-u-fs-r--b">Additional information content:</div> 
-            {% for content in answer.guidance.content %}  
-                {% include "content.html" %}
-            {% endfor %} 
         </div>
     {% endif %}
 {% endif %}
